@@ -1,0 +1,199 @@
+.font-oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.max {
+  max-width: 400px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-content {
+    width: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 3rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+}
+
+@media (max-width: 1025px) {
+  .carousel-caption h4 {
+    display: none;
+  }
+  .btn-custom {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    padding: 0.5rem 1rem;
+    max-width: 90%;
+    bottom: 1rem;
+  }
+}
+
+@media (max-width: 1250px) {
+  .carousel-item img {
+    height: auto;
+    max-height: 400px; /* Réduit l’image */
+    object-fit: cover;
+  }
+
+  .carousel-caption {
+    font-size: 0.9rem; /* Réduit le texte */
+    padding: 1rem;
+  }
+
+  .carousel-caption h4 {
+    font-size: 1.2rem; /* Réduction du H4 */
+  }
+
+  .btn-custom {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.btn-custom {
+    margin-bottom: 30px;
+    border-radius: 0px;
+}
+/* 
+@media (min-width: 576px) {
+    .d-md-block {
+        display: none !important;
+    }
+} */
+
+.container-fluid {
+    max-width: 100%;
+}
+
+.card {
+    border-radius: 0px !important;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+}
+
+.link-highlight2 {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.link-highlight2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -40%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 2px;
+    background-color: #f9f8f6;
+    transition: width 0.3s ease;
+}
+
+.link-highlight2:hover::after {
+    width: 100%;
+}
+/* PAGE INDEX SECTION 3 */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.card .card-body a {
+    text-decoration: none !important
+}
+
+.card-title {
+    min-height: 60px;
+    line-height: 1.2;
+    overflow: hidden;
+}
+
+.news-image {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.news-image:hover {
+    transform: scale(1.05);
+}
+
+/* PAGE INDEX SECTION 4 */
+.section-partenaire {
+    background-color: #282828;
+    color: #f1f1f1;
+    padding: 40px 0;
+}
+.text-color a {
+    color: #CFAD6C;
+}
+
+.link-highlight {
+    position: relative;
+    display: inline-block; /* S'assure que l'élément prend seulement la largeur du texte */
+    color: #0b0b0b;
+    transition: color 0.3s ease;
+}
+
+.link-highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 30px; /* Initialement à 0 pour l'effet de départ */
+    height: 2px;
+    background-color: #0a0a0a;
+    transition: width 0.3s ease; /* Transition sur la largeur */
+}
+
+.link-highlight:hover::after {
+    width: 100%; /* S'étend à la largeur du texte (grâce à inline-block) */
+}
+
+.link-highlight:active::after {
+    width: 100%; /* Même chose pour l'état actif */
+}
+
+.read-more {
+    color: #050505;
+    position: relative;
+    text-decoration: none !important;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #0b0b0a;
+}
