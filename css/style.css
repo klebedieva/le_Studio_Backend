@@ -376,3 +376,10 @@
     margin-left: 0 !important;
   }
 }
+
+@media (max-width: 768px) {
+  .row {
+      margin: 0 20px;
+  }
+}
+

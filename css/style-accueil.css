@@ -152,6 +152,26 @@
     font-size: 0.85rem;
     margin-bottom: 0.45rem;
   }
+
+
+  .link-highlight::after {
+    display: none;
+  }
+
+  .link-highlight2::after {
+    display: none;
+  }
+
+  .read-more {
+    border: 1px solid #fff;
+    padding: 5px 15px;
+  }
+
+  .border-card {
+    border: 1px solid #333;
+    padding: 5px 15px;
+    text-align: center;
+  }
 }
 
 @media (min-width: 991px) {
@@ -184,7 +204,19 @@
   }
   
   .read-more {
-    font-size: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .border-card {
+  border: 1px solid #333;
+  padding: 5px 15px;
+  text-align: center;
+  width: 200px;
+  margin-left: 0;
+  }
+
+  .row {
+    margin: 0 20px;
   }
 }
 
