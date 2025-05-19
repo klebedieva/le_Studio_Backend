@@ -1,0 +1,50 @@
+/* Coordonnées /
+.font-oswald {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.contact-section {
+    padding: 60px 0;
+
+}
+
+
+
+.contact-info p {
+    font-size: 0.95rem;
+    margin-bottom: 3px;
+}
+
+/ Formulaire de Contact */
+
+.contact-form input,
+.contact-form textarea {
+    background-color: #eeeeee;
+    border: none;
+    padding: 10px;
+    border-radius: 0px;
+}
+
+.contact-form button {
+    background-color: #CFAD6C;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 0px;
+    width: 20%;
+    transition: background 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: #a8834e;
+}
+
+.image-map {
+    width: 100%;
+    max-height: 350px;
+    height: auto;
+    object-fit: cover;
+    border: 0;
+}

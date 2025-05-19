@@ -1,364 +1,429 @@
-/* Styles existants conservés */
-.font-oswald {
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
+/* ==========================================================================
+   CSS Accueil - Projet Web
+   Description : Styles organisés pour la page d'accueil, sans typographie (définie dans style-header-footer.css)
+   Structure :
+   1. Mise en page et conteneurs
+   2. Composants (boutons, cartes, liens)
+   3. Carrousel
+   4. Section Activités
+   5. Section Actualités
+   6. Section Partenaires
+   7. Responsive Design (Media Queries)
+   ========================================================================== */
 
-.max {
-  max-width: 600px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.main-content {
-  width: 100%;
-}
-
-.carousel-caption {
-  position: absolute;
-  right: 15%;
-  bottom: 3rem;
-  left: 15%;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  color: #fff;
-  text-align: center;
-}
-
-@media (max-width: 1025px) {
-  .carousel-caption h4 {
-    display: none;
+/* ==========================================================================
+   1. Mise en page et conteneurs
+   ========================================================================== */
+   .max {
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
+  
+  .main-content {
+    width: 100%;
+  }
+  
+  .container-fluid {
+    max-width: 100%;
+  }
+  
+  .col-xl-3 {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* ==========================================================================
+     2. Composants
+     ========================================================================== */
+  
+  /* --- Boutons --- */
   .btn-custom {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .carousel-caption {
-    padding: 0.5rem 1rem;
-    max-width: 90%;
-    bottom: 1rem;
-  }
-}
-
-@media (max-width: 1250px) {
-  .carousel-item img {
-    height: auto;
-    max-height: 400px; /* Réduit l'image */
-    object-fit: cover;
-  }
-
-  .carousel-caption {
-    font-size: 0.9rem; /* Réduit le texte */
-    padding: 1rem;
-  }
-
-  .carousel-caption h4 {
-    font-size: 1.2rem; /* Réduction du H4 */
-  }
-
-  .btn-custom {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-}
-
-.btn-custom {
-  margin-bottom: 30px;
-  border-radius: 0px;
-}
-
-.container-fluid {
-  max-width: 100%;
-}
-
-.card {
-  border-radius: 0px !important;
-}
-
-/* Styles pour la section activités avec responsive */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: #fff;
-  font-weight: bold;
-  text-align: center;
-  padding: 30px;
-  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour assurer la lisibilité */
-}
-
-/* Styles spécifiques pour les icônes et textes dans la section activités */
-.overlay img {
-  width: 60px; /* Taille par défaut des icônes */
-  height: auto;
-  margin-bottom: 10px;
-  transition: all 0.3s ease;
-}
-
-.overlay h5 {
-  font-size: 1.2rem;
-  margin-bottom: 0.75rem;
-  transition: all 0.3s ease;
-}
-
-.overlay p {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
-}
-
-/* Responsive design pour la section activités */
-@media (max-width: 1200px) {
-  .overlay img {
-    width: 40px; /* Légère réduction */
+    margin-bottom: 30px;
+    border-radius: 0px;
   }
   
-  .overlay h5 {
-    font-size: 1rem;
-  }
-  
-  .overlay p {
-    font-size: 0.85rem;
-    margin-bottom: 0.25rem;
-  }
-}
-
-@media (max-width: 991px) {
-  .overlay {
-    /* padding: 10px; */
-    padding: 30px;
-  }
-
-  .overlay img {
-    width: 60px;
-  }
-  
-  .overlay h5 {
-    font-size: 1.25rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .overlay p {
-    font-size: 0.85rem;
-    margin-bottom: 0.45rem;
-  }
-
-
-  .link-highlight::after {
-    display: none;
-  }
-
-  .link-highlight2::after {
-    display: none;
-  }
-
   .read-more {
-    border: 1px solid #fff;
-    padding: 5px 15px;
+    color: #050505;
+    position: relative;
+    text-decoration: none !important;
+    transition: color 0.3s;
   }
-
-  .border-card {
-    border: 1px solid #333;
-    padding: 5px 15px;
+  
+  /* --- Cartes --- */
+  .card {
+    border-radius: 0px !important;
+  }
+  
+  .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+  }
+  
+  .card .card-body a {
+    text-decoration: none !important;
+  }
+  
+  .card-title {
+    min-height: 60px;
+    line-height: 1.2;
+    overflow: hidden;
+  }
+  
+  /* --- Liens --- */
+  .link-highlight2 {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s ease;
+  }
+  
+  .link-highlight2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -40%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 2px;
+    background-color: #f9f8f6;
+    transition: width 0.3s ease;
+  }
+  
+  .link-highlight2:hover::after {
+    width: 100%;
+  }
+  
+  .underline-link {
+    position: relative;
+    color: #111;
+    display: inline;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    width: fit-content;
+  }
+  
+  .underline-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #111;
+    transform: scaleX(0.25);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+    pointer-events: none;
+  }
+  
+  .underline-link:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* ==========================================================================
+     3. Carrousel
+     ========================================================================== */
+  .carousel-caption {
+    position: absolute;
+    max-width: 80%;
+    right: 15%;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
     text-align: center;
   }
-}
-
-@media (min-width: 991px) {
-  .width-custom {
-    max-width: 80%;
+  
+  /* ==========================================================================
+     4. Section Activités
+     ========================================================================== */
+  .activity-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
   }
-
-}
-
-/* Ajustements pour tablettes et mobiles */
-@media (max-width: 768px) {
+  
+  .activity-img.smaller {
+    height: 100px;
+  }
+  
   .overlay {
-    /* padding: 10px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
     padding: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
   }
   
   .overlay img {
     width: 60px;
-    margin-bottom: 6px;
+    height: auto;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
   }
   
   .overlay h5 {
-    font-size: 1.10rem;
-    margin-bottom: 0.4rem;
-  }
-  
-  .overlay p {
-    font-size: 1rem;
-    line-height: 1.3;
-  }
-  
-  .read-more {
-    font-size: 1rem;
-  }
-
-  .border-card {
-  border: 1px solid #333;
-  padding: 5px 15px;
-  text-align: center;
-  width: 200px;
-  margin-left: 0;
-  }
-
-  .row {
-    margin: 0 20px;
-  }
-}
-
-/* Ajustements spécifiques pour petits mobiles */
-@media (max-width: 576px) {
-  .overlay img {
-    width: 80px;
-    margin-bottom: 4px;
-  }
-  
-  .overlay h5 {
-    font-size: 1.25rem;
-    margin-bottom: 0.3rem;
-  }
-  
-  .overlay p {
-    font-size: 0.95rem;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-  }
-  
-  .read-more {
-    font-size: 1.25rem;
-  }
-}
-
-/* Correction de la classe mal nommée dans le HTML */
-.ccol-xl-3 {
-  /* Assurez-vous que cette classe hérite correctement des bonnes propriétés */
-  /* Si c'était une faute de frappe, on applique les mêmes règles que col-xl-3 */
-  position: relative;
-  width: 100%;
-}
-
-/* Styles pour les liens "EN SAVOIR PLUS" */
-.link-highlight2 {
-  position: relative;
-  display: inline-block;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: normal;
-  transition: color 0.3s ease;
-}
-
-.link-highlight2::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -40%;
-  transform: translateX(-50%);
-  width: 30%;
-  height: 2px;
-  background-color: #f9f8f6;
-  transition: width 0.3s ease;
-}
-
-.link-highlight2:hover::after {
-  width: 100%;
-}
-
-/* PAGE INDEX SECTION 3 */
-.card {
-  transition: transform 0.3s, box-shadow 0.3s;
-  overflow: hidden;
-}
-
-.card .card-body a {
-  text-decoration: none !important;
-}
-
-.card-title {
-  min-height: 60px;
-  line-height: 1.2;
-  overflow: hidden;
-}
-
-.news-image {
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-
-.news-image:hover {
-  transform: scale(1.05);
-}
-
-/* PAGE INDEX SECTION 4 */
-.section-partenaire {
-  background-color: #282828;
-  color: #f1f1f1;
-  padding: 40px 0;
-}
-
-.text-color a {
-  color: #CFAD6C;
-}
-
-.underline-link {
-  position: relative;
-  color: #111;
-  display: inline; /* Assure que la largeur suive le contenu */
-  transition: color 0.3s ease;
-  text-decoration: none;
-  width: fit-content
-}
-
-.underline-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
-  background-color: #111;
-  transform: scaleX(0.25);
-  transform-origin: left;
-  transition: transform 0.3s ease-out;
-  pointer-events: none;
-}
-
-.underline-link:hover::after {
-  transform: scaleX(1);
-}
-
-.read-more {
-  color: #050505;
-  position: relative;
-  text-decoration: none !important;
-  transition: color 0.3s;
-}
-
-/* Correction titre responsive */
-@media (max-width: 768px) {
-  h2.text-center {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 576px) {
-  h2.text-center {
     font-size: 1.2rem;
-    padding: 0 10px;
+    margin-bottom: 0.75rem;
+    transition: all 0.3s ease;
   }
-}
+  
+  .overlay p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* ==========================================================================
+     5. Section Actualités
+     ========================================================================== */
+  .news-image {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .news-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ==========================================================================
+     6. Section Partenaires
+     ========================================================================== */
+  .section-partenaire {
+    background-color: #282828;
+    color: #f1f1f1;
+    padding: 40px 0;
+  }
+  
+  .text-color a {
+    color: #CFAD6C;
+  }
+  
+  /* ==========================================================================
+     7. Responsive Design
+     ========================================================================== */
+  
+  /* --- Grands écrans (> 1251px) --- */
+  @media (min-width: 1251px) {
+    .carousel-item img {
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+      object-position: center;
+    }
+  
+    .carousel-caption {
+      bottom: 20%;
+    }
+  }
+  
+  @media (min-width: 991px) {
+    .width-custom {
+      max-width: 80%;
+    }
+  }
+  
+  /* --- Écrans moyens (≤ 1250px) --- */
+  @media (max-width: 1250px) {
+    .carousel-item img {
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+    }
+  
+    .carousel-caption {
+      font-size: 0.9rem;
+      padding: 1rem;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  
+    .carousel-caption h4 {
+      font-size: 1.2rem;
+    }
+  
+    .btn-custom {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* --- Tablettes (≤ 1200px) --- */
+  @media (max-width: 1200px) {
+    .overlay img {
+      width: 40px;
+    }
+  
+    .overlay h5 {
+      font-size: 1rem;
+    }
+  
+    .overlay p {
+      font-size: 0.85rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+  
+  /* --- Tablettes (≤ 991px) --- */
+  @media (max-width: 991px) {
+    .overlay {
+      padding: 30px;
+    }
+  
+    .overlay img {
+      width: 60px;
+    }
+  
+    .overlay h5 {
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+  
+    .overlay p {
+      font-size: 0.85rem;
+      margin-bottom: 0.45rem;
+    }
+  
+    .link-highlight::after {
+      display: none;
+    }
+  
+    .link-highlight2::after {
+      display: none;
+    }
+  
+    .read-more {
+      border: 1px solid #fff;
+      padding: 5px 15px;
+    }
+  
+    .border-card {
+      border: 1px solid #333;
+      padding: 5px 15px;
+      text-align: center;
+    }
+  }
+  
+  /* --- Mobiles (≤ 768px) --- */
+  @media (max-width: 768px) {
+    .carousel-caption {
+      padding: 0.5rem 1rem;
+      max-width: 90%;
+      bottom: 1rem;
+    }
+  
+    .carousel-caption h4 {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  
+    .overlay {
+      padding: 30px;
+    }
+  
+    .overlay img {
+      width: 60px;
+      margin-bottom: 6px;
+    }
+  
+    .overlay h5 {
+      font-size: 1.10rem;
+      margin-bottom: 0.4rem;
+    }
+  
+    .overlay p {
+      font-size: 1rem;
+      line-height: 1.3;
+    }
+  
+    .read-more {
+      font-size: 1rem;
+    }
+  
+    .border-card {
+      border: 1px solid #333;
+      padding: 5px 15px;
+      text-align: center;
+      width: 200px;
+      margin-left: 0;
+    }
+  
+    .margin-footer {
+      margin: 0 20px;
+    }
+  
+    h2.text-center {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* --- Petits mobiles (≤ 576px) --- */
+  @media (max-width: 576px) {
+    .overlay img {
+      width: 80px;
+      margin-bottom: 4px;
+    }
+  
+    .overlay h5 {
+      font-size: 1.25rem;
+      margin-bottom: 0.3rem;
+    }
+  
+    .overlay p {
+      font-size: 0.95rem;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+  
+    .read-more {
+      font-size: 1.25rem;
+    }
+  
+    h2.text-center {
+      font-size: 1.2rem;
+      padding: 0 10px;
+    }
+  }
+  
+  /* --- Très petits écrans (≤ 354px) --- */
+  @media (max-width: 354px) {
+    .menu-logo .logo {
+      padding: 0 0 0 20px;
+      margin: 0;
+      height: 50px;
+    }
+  
+    .carousel img {
+      height: 500px;
+    }
+  }
+  
+  /* --- Carrousel spécifique (≤ 1250px) --- */
+  @media (max-width: 1250px) {
+    .carousel-item img {
+      height: 700px;
+      object-fit: cover;
+    }
+  }
+  
+  /* --- Carrousel spécifique (≤ 768px) --- */
+  @media (max-width: 768px) {
+    .carousel-item img {
+      height: 500px;
+    }
+  }
