@@ -114,7 +114,11 @@
     border-color: white !important;
   }
   
+<<<<<<< Updated upstream
+  /* ==========================================================================
+=======
   ==========================================================================
+>>>>>>> Stashed changes
      3. Carrousel
      ========================================================================== */
   .carousel-indicators .round {
@@ -233,6 +237,19 @@
       width: 100%;
     }
   }
+
+     /* --- Très petits écrans (≤ 354px) --- */
+     @media (max-width: 354px) {
+      .menu-logo .logo {
+        padding: 0 0 0 20px;
+        margin: 0;
+        height: 50px;
+      }
+    
+      .carousel img {
+        height: 500px;
+      }
+    }
   
   /* --- Tablettes (≤ 991.98px) --- */
   @media (max-width: 991.98px) {
