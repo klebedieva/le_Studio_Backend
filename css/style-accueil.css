@@ -141,16 +141,7 @@
   /* ==========================================================================
      4. Section Activités
      ========================================================================== */
-  .activity-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .activity-img.smaller {
-    height: 100px;
-  }
-  
+ 
   .overlay {
     position: absolute;
     top: 0;
