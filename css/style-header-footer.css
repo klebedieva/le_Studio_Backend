@@ -114,9 +114,9 @@
     border-color: white !important;
   }
   
-  ==========================================================================
+  /* ==========================================================================
      3. Carrousel
-     ========================================================================== */
+     ==========================================================================  */
   .carousel-indicators .round {
     width: 15px !important;
     height: 15px !important;
@@ -199,6 +199,7 @@
   .btn-insta {
     width: 200px;
     padding: 5px 8px;
+    box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
   }
   
   .activity-img {
@@ -227,9 +228,9 @@
       height: 300px;
     }
   
-    .btn-insta {
+    /* .btn-insta {
       top: 60%;
-    }
+    } */
   
     .center {
       text-align: center;
@@ -275,6 +276,10 @@
       text-align: center;
       /* width: 10%; */
     }
+
+    .image-overlay {
+      display: none;
+    }
   }
   
   /* --- Grands écrans (≥ 992px) --- */
@@ -287,22 +292,12 @@
       display: inline-block !important;
     }
 
-    .image-wrapper,
-    .image-wrapper2,
-    .image-wrapper3,
-    .image-wrapper4,
-    .image-wrapper5,
-    .image-wrapper6 {
+    .image-wrapper {
       overflow: hidden;
       position: relative;
     }
 
-    .image-overlay,
-    .image-overlay2,
-    .image-overlay3,
-    .image-overlay4,
-    .image-overlay5,
-    .image-overlay6 {
+    .image-overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -320,12 +315,7 @@
       font-size: 0.85rem;
     }
     
-    .image-wrapper:hover .image-overlay,
-    .image-wrapper2:hover .image-overlay2,
-    .image-wrapper3:hover .image-overlay3,
-    .image-wrapper4:hover .image-overlay4,
-    .image-wrapper5:hover .image-overlay5,
-    .image-wrapper6:hover .image-overlay6 {
+    .image-wrapper:hover .image-overlay {
       opacity: 1;
     }
 
