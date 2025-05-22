@@ -53,6 +53,7 @@
   /* ==========================================================================
      2. Navigation
      ========================================================================== */
+
   .menu-logo .logo {
     height: 60px;
     padding-left: 30px;
@@ -64,10 +65,6 @@
   
   .color-menu li:not(.language-badge) a {
     color: #FFF !important;
-  }
-  
-  .navbar-nav .nav-link {
-    color: #fff;
   }
   
   .hover-menu:hover {
@@ -140,7 +137,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    transition: background-image 0.3s ease;
+    transition: background-image 0.3s ease,
+    transform 0.3s ease;
     cursor: pointer;
   }
   
@@ -171,12 +169,7 @@
     background-image: url(/assets/img/tripadvisor-hover.svg);
     transform: scale(1.2);
   }
-  
-  .rs {
-    height: 27px;
-    padding-left: 0;
-  }
-  
+
   /* ==========================================================================
      5. Footer
      ========================================================================== */
@@ -217,46 +210,25 @@
   
   /* --- Très petits écrans (≤ 575.98px) --- */
   @media (max-width: 575.98px) {
-    .btn-custom {
-      display: block;
-      width: 100%;
-      margin-bottom: 1rem;
-    }
-  
-    #carouselExampleSlidesOnly {
-      margin-top: 2.5rem;
-      height: 300px;
-    }
-  
-    /* .btn-insta {
-      top: 60%;
-    } */
-  
     .center {
       text-align: center;
     }
   }
   
-  /* --- Petits écrans (≥ 576px) --- */
-  @media (min-width: 576px) {
-    .center .btn-group {
-      width: 100%;
+
+  /* --- Très petits écrans (≤ 354px) --- */
+  @media (max-width: 354px) {
+    .menu-logo .logo {
+      padding: 0 0 0 20px;
+      margin: 0;
+      height: 50px;
+    }
+  
+    .carousel img {
+      height: 500px;
     }
   }
 
-     /* --- Très petits écrans (≤ 354px) --- */
-     @media (max-width: 354px) {
-      .menu-logo .logo {
-        padding: 0 0 0 20px;
-        margin: 0;
-        height: 50px;
-      }
-    
-      .carousel img {
-        height: 500px;
-      }
-    }
-  
   /* --- Tablettes (≤ 991.98px) --- */
   @media (max-width: 991.98px) {
     .navbar-collapse {
@@ -287,10 +259,10 @@
     .navbar-toggler {
       display: none !important;
     }
-  
+/*   
     .language-badge-inside {
       display: inline-block !important;
-    }
+    } */
 
     .image-wrapper {
       overflow: hidden;
@@ -324,13 +296,7 @@
       cursor: pointer;
     }
   }
-  
-  /* --- Écrans XL (≥ 1200px) --- */
-  @media (min-width: 1200px) {
-    .center .btn-group {
-      max-width: 50%;
-    }
-  }
+ 
   
   /* --- Écrans spécifiques (≤ 1029.98px) --- */
   @media (max-width: 1029.98px) {

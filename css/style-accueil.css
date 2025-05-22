@@ -390,20 +390,7 @@
       padding: 0 10px;
     }
   }
-  
-  /* --- Très petits écrans (≤ 354px) --- */
-  @media (max-width: 354px) {
-    .menu-logo .logo {
-      padding: 0 0 0 20px;
-      margin: 0;
-      height: 50px;
-    }
-  
-    .carousel img {
-      height: 500px;
-    }
-  }
-  
+
   /* --- Carrousel spécifique (≤ 1250px) --- */
   @media (max-width: 1250px) {
     .carousel-item img {
