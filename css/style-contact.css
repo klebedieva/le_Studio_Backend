@@ -17,12 +17,6 @@
     margin: 0 auto;
   }
   
-  .contact-info p {
-    font-size: 0.95rem;
-    margin-bottom: 3px;
-    padding: 0;
-  }
-  
   /* ==========================================================================
      2. Formulaire de contact
      ========================================================================== */
@@ -68,7 +62,7 @@
     cursor: pointer;
   }
   
-  .bg-img img {
+  .banner-img img {
     object-fit: cover; 
     height: 300px;
     width: 100%;
@@ -78,22 +72,13 @@
      4. Responsive Design
      ========================================================================== */
   
-  /* --- Tablettes et mobiles (≤ 991px) --- */
-  @media (max-width: 991px) {
-    .contact-section {
-      max-width: 90%;
-    }
-    .contact-form button {
-      width: 100%;
-    }
-  }
-  
   /* --- Mobiles (≤ 767px) --- */
   @media (max-width: 767px) {
-    .contact-section {
-      max-width: 95%;
-    }
     .order-2 {
       margin-top: 40px;
+    }
+
+    .contact-form button {
+      width: 100%;
     }
   }
