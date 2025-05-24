@@ -29,7 +29,10 @@
                 },
                 {
                     element : inputMsg,
-                    regex: /^(?!.*<.*?>)[\s\S]{10,1000}$/, /*(?!.*<.*?>) interdit les balises HTML (par exemple, <p>, <div>, <script>) [\s\S] atorise les caractères, y compris les espaces (\s) et non-espaces (\S), donc inclut les nouvelles lignes.*/
+                    regex: /^(?!.*<.*?>)[\s\S]{10,1000}$/, /*
+                    == (?!.*<.*?>) interdit les balises HTML (par exemple, <p>, <div>, <script>) ==
+                    == [\s\S] atorise les caractères, y compris les espaces (\s) et non-espaces (\S) ==
+                    */
                     message : "Le message est invalide"
                 }
             ]
