@@ -35,8 +35,8 @@
 .float-slider {
   float: right;
   width: 40%;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
+  margin-left: 32px;
+  margin-bottom: 16px;
 }
 
 .btn-custom {
@@ -60,8 +60,8 @@
 #carouselExampleSlidesOnly {
   flex-grow: 1;
 }
-
-#carouselExampleSlidesOnly .carousel-inner,
+/* Caroussel 3 images */
+#carouselExampleSlidesOnly .carousel-inner, 
 #carouselExampleSlidesOnly .carousel-item,
 #carouselExampleSlidesOnly .carousel-item img {
   height: 100%;

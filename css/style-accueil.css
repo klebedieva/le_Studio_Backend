@@ -4,11 +4,10 @@
    Structure :
    1. Mise en page et conteneurs
    2. Composants (boutons, cartes, liens)
-   3. Carrousel
-   4. Section Activités
-   5. Section Actualités
-   6. Section Partenaires
-   7. Responsive Design (Media Queries)
+   3. Section Activités
+   4. Section Actualités
+   5. Section Partenaires
+   6. Responsive Design (Media Queries)
    ========================================================================== */
 
 /* ==========================================================================
@@ -94,21 +93,7 @@
   }
   
   /* ==========================================================================
-     3. Carrousel
-     ========================================================================== */
-  .carousel-caption {
-    position: absolute;
-    max-width: 80%;
-    right: 15%;
-    left: 15%;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    color: #fff;
-    text-align: center;
-  }
-  
-  /* ==========================================================================
-     4. Section Activités
+     3. Section Activités
      ========================================================================== */
  
   .overlay {
@@ -132,19 +117,19 @@
   }
   
   .overlay h5 {
-    font-size: 1.2rem;
-    margin-bottom: 0.75rem;
+    font-size: 19px;
+    margin-bottom: 12px;
     transition: all 0.3s ease;
   }
   
   .overlay p {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    font-size: 14;
+    margin-bottom: 16px;
     transition: all 0.3s ease;
   }
   
   /* ==========================================================================
-     5. Section Actualités
+     4. Section Actualités
      ========================================================================== */
   .news-image {
     height: 300px;
@@ -158,7 +143,7 @@
   }
   
   /* ==========================================================================
-     6. Section Partenaires
+     5. Section Partenaires
      ========================================================================== */
   .section-partenaire {
     background-color: #282828;
@@ -171,7 +156,7 @@
   }
   
   /* ==========================================================================
-     7. Responsive Design
+     6. Responsive Design
      ========================================================================== */
     /* --- Petits mobiles (≤ 576px) --- */
   @media (max-width: 576px) {
@@ -181,22 +166,22 @@
     }
   
     .overlay h5 {
-      font-size: 1.25rem;
-      margin-bottom: 0.3rem;
+      font-size: 20px;
+      margin-bottom: 5px;
     }
     
     .overlay p {
-      font-size: 0.95rem;
+      font-size: 15px;
       line-height: 1.2;
-      margin-bottom: 0.5rem;
+      margin-bottom: 8px;
     }
   
     .read-more {
-      font-size: 1.25rem;
+      font-size: 20px;
     }
   
     h2.text-center {
-      font-size: 1.2rem;
+      font-size: 19px;
       padding: 0 10px;
     }
   }
@@ -204,17 +189,6 @@
   @media (max-width: 768px) {
     .carousel-item img {
       height: 500px;
-    }
-
-    .carousel-caption {
-      padding: 0.5rem 1rem;
-      max-width: 90%;
-      bottom: 1rem;
-    }
-  
-    .carousel-caption h4 {
-      max-width: 100%;
-      margin: 0 auto;
     }
   
     .overlay {
@@ -227,17 +201,17 @@
     }
   
     .overlay h5 {
-      font-size: 1.10rem;
-      margin-bottom: 0.4rem;
+      font-size: 17px;
+      margin-bottom: 6px;
     }
   
     .overlay p {
-      font-size: 1rem;
+      font-size: 16px;
       line-height: 1.3;
     }
   
     .read-more {
-      font-size: 1rem;
+      font-size: 16px;
     }
   
     .border-card {
@@ -253,7 +227,7 @@
     }
   
     h2.text-center {
-      font-size: 1.5rem;
+      font-size: 24px;
     }
   }
     /* --- Tablettes (≤ 991px) --- */
@@ -267,13 +241,13 @@
     }
   
     .overlay h5 {
-      font-size: 1.25rem;
-      margin-bottom: 0.25rem;
+      font-size: 20px;
+      margin-bottom: 4px;
     }
   
     .overlay p {
-      font-size: 0.85rem;
-      margin-bottom: 0.45rem;
+      font-size: 14px;
+      margin-bottom: 7px;
     }
   
     .underline-center::after {
@@ -298,12 +272,11 @@
     }
   
     .overlay h5 {
-      font-size: 1rem;
+      font-size: 16px;
     }
   
     .overlay p {
-      font-size: 0.85rem;
-      margin-bottom: 0.25rem;
+      margin-bottom: 4px;
     }
 
     .carousel-item img {
@@ -311,20 +284,20 @@
       object-fit: cover;
     }
   
-    .carousel-caption {
+    /* .carousel-caption {
       font-size: 0.9rem;
       padding: 1rem;
       max-width: 80%;
       margin: 0 auto;
-    }
+    } */
   
-    .carousel-caption h4 {
+    /* .carousel-caption h4 {
       font-size: 1.2rem;
-    }
+    } */
   
     .btn-custom {
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
+      padding: 8px 16px;
+      font-size: 14px;
     }
   
   }
@@ -337,9 +310,9 @@
       object-position: center;
     }
   
-    .carousel-caption {
+    /* .carousel-caption {
       bottom: 20%;
-    }
+    } */
   }
 
  

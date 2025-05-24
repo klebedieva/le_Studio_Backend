@@ -33,7 +33,6 @@
   }
 
   p {
-    font-size: 1rem;
     font-family: "Roboto", sans-serif;
   }
 
@@ -93,7 +92,7 @@
     color: #fff !important;
   }
   
-  .dropdown-item.hover-gold:hover {
+  .dropdown-item.hover-dropdown:hover {
     background-color: #c3ac6e !important;
   }
   
@@ -101,14 +100,15 @@
     border: none !important;
   }
 
-  .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  .custom-toggler .fa-bars {
+    color: white; 
+    font-size: 24px; 
+    transition: color 0.3s ease; 
   }
-  
+
   .custom-toggler:focus,
   .custom-toggler:active {
     box-shadow: none;
-    border-color: white !important;
   }
 
   /* --- Language Badge --- */
@@ -153,7 +153,7 @@
   /* ==========================================================================
      3. Carrousel
      ==========================================================================  */
-  .carousel-indicators .round {
+  .carousel-indicators .round-btn {
     width: 15px !important;
     height: 15px !important;
     border-radius: 50% !important;
@@ -162,7 +162,7 @@
     margin: 0 4px !important;
   }
   
-  .carousel-indicators .round.active {
+  .carousel-indicators .round-btn.active {
     background-color: #c3ac6e !important;
   }
   
@@ -234,25 +234,16 @@
     box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
   }
   
-  .activity-img {
+  .box-img-insta {
     width: 100%;
     height: 200px;
     object-fit: cover;
   }
   
-  .activity-img.smaller {
-    height: 100px;
-  }
   /* ==========================================================================
      6. Responsive Design
      ========================================================================== */
-  
-  /* --- Très petits écrans (≤ 575.98px) --- */
-  @media (max-width: 575.98px) {
-    .center {
-      text-align: center;
-    }
-  }
+ 
   
   /* --- Très petits écrans (≤ 354px) --- */
   @media (max-width: 354px) {
@@ -281,13 +272,8 @@
     .ps-3-responsive {
       padding-left: 20px !important;
     }
-  
-    .center {
-      text-align: center;
-      /* width: 10%; */
-    }
 
-    .image-overlay {
+    .box-hover-insta {
       display: none;
     }
   }
@@ -303,7 +289,7 @@
       position: relative;
     }
 
-    .image-overlay {
+    .box-hover-insta {
       position: absolute;
       top: 0;
       left: 0;
@@ -317,11 +303,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 1rem;
-      font-size: 0.85rem;
+      gap: 16px;
+      font-size: 14px;
     }
     
-    .image-wrapper:hover .image-overlay {
+    .image-wrapper:hover .box-hover-insta {
       opacity: 1;
     }
 

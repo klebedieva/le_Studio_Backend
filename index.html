@@ -49,7 +49,7 @@
       >
         <div class="container-fluid menu-logo p-0">
           <a class="navbar-brand" href="./index.html">
-            <img src="./assets/img/logo.png" class="logo" alt="Logo" />
+            <img src="./assets/img/logo.png" class="logo" alt="Logo Le studio" />
           </a>
 
           <button
@@ -64,7 +64,7 @@
             <span class="language-badge-inside">
               <span class="language-text">EN</span>
             </span>
-            <span class="navbar-toggler-icon"></span>
+            <i class="fa-solid fa-bars"></i>
           </button>
 
           <div
@@ -91,7 +91,7 @@
                 <ul class="dropdown-menu bg-black z-3 ps-3">
                   <li>
                     <a
-                      class="dropdown-item text-white hover-gold ps-3-responsive"
+                      class="dropdown-item text-white hover-dropdown ps-3-responsive"
                       href="./404.html"
                     >
                       LE CYCLING
@@ -99,7 +99,7 @@
                   </li>
                   <li>
                     <a
-                      class="dropdown-item text-white hover-gold ps-3-responsive"
+                      class="dropdown-item text-white hover-dropdown ps-3-responsive"
                       href="./presentation.html"
                     >
                       LE TRAINING FONCTIONNEL
@@ -107,7 +107,7 @@
                   </li>
                   <li>
                     <a
-                      class="dropdown-item text-white hover-gold ps-3-responsive"
+                      class="dropdown-item text-white hover-dropdown ps-3-responsive"
                       href="./404.html"
                     >
                       LE CROSSFIT
@@ -115,7 +115,7 @@
                   </li>
                   <li>
                     <a
-                      class="dropdown-item text-white hover-gold ps-3-responsive"
+                      class="dropdown-item text-white hover-dropdown ps-3-responsive"
                       href="./404.html"
                     >
                       PERSONAL TRAINING - COACH PERSONNEL
@@ -124,7 +124,7 @@
                 </ul>
               </li>
 
-              <li class="nav-item hover-menu ">
+              <li class="nav-item hover-menu">
                 <a class="nav-link" href="./404.html">NOS OFFRES</a>
               </li>
               <li class="nav-item hover-menu">
@@ -194,30 +194,34 @@
         class="carousel slide position-relative z-1 font-oswald"
         data-bs-ride="carousel"
       >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            class="active round"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            class="round"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            class="round"
-            aria-label="Slide 3"
-          ></button>
-        </div>
+      <!-- Indicateurs du carrousel -->
+      <div class="carousel-indicators">
+        <!-- Bouton pour la 1re diapositive (active par défaut) -->
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active round-btn"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <!-- Bouton pour la 2e diapositive -->
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          class="round-btn"
+          aria-label="Slide 2"
+        ></button>
+        <!-- Bouton pour la 3e diapositive (le tien) -->
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          class="round-btn"
+          aria-label="Slide 3"
+        ></button>
+      </div>
 
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -258,7 +262,7 @@
               class="d-block w-100"
               alt="Slide 3"
             />
-            <div class="carousel-caption d-block">
+            <div class="carousel-caption d-block text-white text-center">
               <h2 class="mb-4">
                 2 INSCRIPTIONS SIMULTANÉES + UN 3ÈME ABONNEMENT DE 6 MOIS OFFERT
                 !
@@ -282,7 +286,7 @@
         BIARRITZ
       </h2>
       <div class="container text-center mt-3">
-        <img src="./assets/img/bg_titre.jpg" class="mx-auto d-block" alt="" />
+        <img src="./assets/img/bg_titre.jpg" class="mx-auto d-block" alt="barre sous-titre" />
       </div>
       <p class="mt-4 text-start">
         Aujourd'hui beaucoup de salles de sport v Snip vendent des abonnements
@@ -316,13 +320,13 @@
           LES ACTIVITÉS PROPOSÉES AU STUDIO SPORT BIARRITZ
         </h2>
         <div class="container text-center mb-4 mt-3">
-          <img src="./assets/img/bg_titre.jpg" class="mx-auto d-block" alt="" />
+          <img src="./assets/img/bg_titre.jpg" class="mx-auto d-block" alt="barre sous-titre" />
         </div>
         <div class="row g-0">
           <div class="col-lg-3 col-md-6 col-sm-6 col-12 position-relative">
             <img
               src="./assets/img/activites/bg_activite_1.jpg"
-              alt="Image 1"
+              alt="personnal training"
               class="img-fluid w-100"
             />
             <div
@@ -330,7 +334,7 @@
             >
               <img
                 src="./assets/img/activites/icon_poids.png"
-                alt="Icône Personal Training"
+                alt="icon personnal training"
               />
               <h5 class="text-white mb-2">PERSONAL TRAINING</h5>
               <p class="fw-light text-center">
@@ -349,7 +353,7 @@
           <div class="col-lg-3 col-md-6 col-sm-6 col-12 position-relative">
             <img
               src="./assets/img/activites/bg_activite_2.jpg"
-              alt="Image 2"
+              alt="cycling"
               class="img-fluid w-100"
             />
             <div
@@ -357,7 +361,7 @@
             >
               <img
                 src="./assets/img/activites/icon_velo.png"
-                alt="Icône Cycling"
+                alt="Icon Cycling"
               />
               <h5 class="text-white mb-2">CYCLING</h5>
               <p class="fw-light text-center">
@@ -376,7 +380,7 @@
           <div class="col-lg-3 col-md-6 col-sm-6 col-12 position-relative">
             <img
               src="./assets/img/activites/bg_activite_3.jpg"
-              alt="Image 3"
+              alt="Training Fonctionnel"
               class="img-fluid w-100"
             />
             <div
@@ -384,7 +388,7 @@
             >
               <img
                 src="./assets/img/activites/icon_corde.png"
-                alt="Icône Training Fonctionnel"
+                alt="Icon Training Fonctionnel"
               />
               <h5 class="text-white mb-2">TRAINING FONCTIONNEL</h5>
               <p class="fw-light text-center">
@@ -403,7 +407,7 @@
           <div class="col-lg-3 col-md-6 col-sm-6 col-12 position-relative">
             <img
               src="./assets/img/activites/bg_activite_4.jpg"
-              alt="Image 4"
+              alt="CrossFit"
               class="img-fluid w-100"
             />
             <div
@@ -411,7 +415,7 @@
             >
               <img
                 src="./assets/img/activites/icon_alter.png"
-                alt="Icône CrossFit"
+                alt="Icon CrossFit"
               />
               <h5 class="text-white mb-2">CROSSFIT</h5>
               <p class="fw-light text-center">
@@ -439,7 +443,7 @@
       <div class="container mt-3">
         <h2 class="text-center">NOS DERNIÈRES ACTUALITÉS</h2>
         <div class="container text-center">
-          <img src="./assets/img/bg_titre.jpg" class="mx-auto d-block" alt="" />
+          <img src="./assets/img/bg_titre.jpg" class="mx-auto d-block" alt="barre sous-titre" />
         </div>
         <div class="row g-3 text-left mt-4">
           <div class="col-md-4">
@@ -533,7 +537,7 @@
       <div class="section-partenaire text-center">
         <div class="container">
           <h2>STUDIO SPORT & COACHING, NOS PARTENAIRES</h2>
-          <img src="./assets/img/bg_titre.jpg" alt="" />
+          <img src="./assets/img/bg_titre.jpg" alt="barre sous-titre" />
           <p class="my-5 text-color">
             En tant que membre du Studio Sport & Coaching, vous bénéficierez
             dans ces établissements d'avantages exclusifs.
@@ -586,10 +590,10 @@
           <div class="col-xl-2 col-lg-4 col-sm-6 col-12 image-wrapper">
             <img
               src="./assets/img/instagram/infos.jpg"
-              alt="Activité 1"
-              class="img-fluid activity-img"
+              alt="Instagram image"
+              class="img-fluid box-img-insta"
             />
-            <span class="image-overlay">
+            <span class="box-hover-insta">
               <i class="fa-solid fa-comment" style="color: #ffffff">145</i>
               <i class="fa-solid fa-heart" style="color: #ffffff">14</i>
             </span>
@@ -597,10 +601,10 @@
           <div class="col-xl-2 col-lg-4 col-sm-6 col-12 image-wrapper">
             <img
               src="./assets/img/instagram/photos.jpg"
-              alt="Activité 2"
-              class="img-fluid activity-img"
+              alt="Instagram image"
+              class="img-fluid box-img-insta"
             />
-            <span class="image-overlay">
+            <span class="box-hover-insta">
               <i class="fa-solid fa-comment" style="color: #ffffff">785</i>
               <i class="fa-solid fa-heart" style="color: #ffffff">245</i>
             </span>
@@ -608,10 +612,10 @@
           <div class="col-xl-2 col-lg-4 col-sm-6 col-12 image-wrapper">
             <img
               src="./assets/img/instagram/promos.jpg"
-              alt="Activité 3"
-              class="img-fluid activity-img"
+              alt="Instagram image"
+              class="img-fluid box-img-insta"
             />
-            <span class="image-overlay">
+            <span class="box-hover-insta">
               <i class="fa-solid fa-comment" style="color: #ffffff">145</i>
               <i class="fa-solid fa-heart" style="color: #ffffff">61</i>
             </span>
@@ -619,10 +623,10 @@
           <div class="col-xl-2 col-lg-4 col-sm-6 col-12 image-wrapper">
             <img
               src="./assets/img/instagram/tutos.jpg"
-              alt="Activité 4"
-              class="img-fluid activity-img"
+              alt="Instagram image"
+              class="img-fluid box-img-insta"
             />
-            <span class="image-overlay">
+            <span class="box-hover-insta">
               <i class="fa-solid fa-comment" style="color: #ffffff">569</i>
               <i class="fa-solid fa-heart" style="color: #ffffff">58</i>
             </span>
@@ -630,10 +634,10 @@
           <div class="col-xl-2 col-lg-4 col-sm-6 col-12 image-wrapper">
             <img
               src="./assets/img/instagram/videos.jpg"
-              alt="Activité 5"
-              class="img-fluid activity-img"
+              alt="Instagram image"
+              class="img-fluid box-img-insta"
             />
-            <span class="image-overlay">
+            <span class="box-hover-insta">
               <i class="fa-solid fa-comment" style="color: #ffffff">259</i>
               <i class="fa-solid fa-heart" style="color: #ffffff">38</i>
             </span>
@@ -641,10 +645,10 @@
           <div class="col-xl-2 col-lg-4 col-sm-6 col-12 image-wrapper">
             <img
               src="./assets/img/instagram/infos.jpg"
-              alt="Activité 6"
-              class="img-fluid activity-img"
+              alt="Instagram image"
+              class="img-fluid box-img-insta"
             />
-            <span class="image-overlay">
+            <span class="box-hover-insta">
               <i class="fa-solid fa-comment" style="color: #ffffff">602</i>
               <i class="fa-solid fa-heart" style="color: #ffffff">179</i>
             </span>
