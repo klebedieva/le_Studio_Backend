@@ -2,7 +2,7 @@
             const inputPrenom = document.getElementById("prenom");
             const inputTel = document.getElementById("tel");
             const inputEmail = document.getElementById("email");
-            const textArea = document.getElementById("msg")
+            const inputMsg = document.getElementById("msg")
 
             // Regex expression régulière partielle utilisée pour valider
             const inputs = [
@@ -26,12 +26,17 @@
                     element : inputTel,
                     regex : /^[0-9]{10}$/,
                     message : "Le téléphone est invalide"
+                },
+                {
+                    element : inputMsg,
+                    regex: /^(?!.*<.*?>)[\s\S]{10,1000}$/, /*(?!.*<.*?>) interdit les balises HTML (par exemple, <p>, <div>, <script>) [\s\S] atorise les caractères, y compris les espaces (\s) et non-espaces (\S), donc inclut les nouvelles lignes.*/
+                    message : "Le message est invalide"
                 }
             ]
               
             inputs.forEach(input => {
                     input.element.addEventListener("input", function (e) {
-                        RegexTest(this, input.regex);
+                        RegexTest(this, input.regex, input.message);
                     });
             });
             
