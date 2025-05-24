@@ -10,25 +10,28 @@
 /* ==========================================================================
    1. Section Training
    ========================================================================== */
-.section-training {
-  padding: 3rem 0;
-  background-color: #fff;
-  margin-top: 5rem;
+
+.overlay-banner {
+  background-color: #000000; 
+  opacity: 0.6;
+}
+
+.image-banner {
+  object-fit: cover; 
+  height: 300px;
 }
 
 .section-training h2 {
-  position: relative;
-  font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
 }
 
 .section-training p {
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 18px;
+  line-height: 1.5;
   color: #333;
-  margin-bottom: 1.5rem;
+  margin-bottom: 20px;
   text-align: justify;
 }
 
@@ -44,7 +47,7 @@
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 0.75rem 1.25rem;
+  padding: 12px 20px;
   border: none;
   border-radius: 0;
   transition: background-color 0.3s;
@@ -76,78 +79,26 @@
 /* --- Très petits écrans (≤ 575.98px) --- */
 @media (max-width: 575.98px) {
   .section-training h2 {
-    font-size: 1.5rem;
+    font-size: 28px;
   }
-
-  /* .content-training .col-md-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  } */
 
   .section-training .float-slider {
     float: none;
     width: 100%;
     margin-left: 0;
-    margin-top: 2rem;
+    margin-top: 32px;
   }
-
-  /* .section-training .text-block {
-    overflow: visible;
-  } */
-
-  /* .text-btn {
-    flex-direction: column;
-    gap: 1rem;
-    width: 100% !important;
-  }  */
-
-  /* .section-training .text-block .btn-group .btn-custom {
-    width: 100%;
-  } */
 
   .btn-custom {
     display: block;
-    width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
   }
 
   #carouselExampleSlidesOnly {
-    margin-top: 2.5rem;
-    height: 300px;
-  }
-
-  /* .content-training .col-md-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  } */
-}
-
-/* --- Écrans moyens (576px - 1000px) --- */
-@media (min-width: 576px) and (max-width: 1000px) {
-  .section-training h2 {
-    font-size: 1.75rem;
-  }
-
-  .section-training p {
-    font-size: 0.95rem;
-  }
-
-  .btn-custom {
-    font-size: 0.9rem;
+    margin-top: 40px;
+    height: auto;
   }
 }
 
-/* --- Grands écrans (≥ 768px) --- */
-@media (min-width: 768px) {
-  .container-fluid h2 {
-    padding: 0 5rem;
-  }
-}
 
-/* --- Écrans spécifiques (≤ 1000px) --- */
-@media (max-width: 1000px) {
-  .content-training .col-md-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
+
