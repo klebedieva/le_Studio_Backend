@@ -23,11 +23,6 @@
     font-weight: 400;
   }
   
-  .weight {
-    font-weight: 500;
-    color: #222;
-  }
-
   .roboto {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -46,7 +41,7 @@
     font-family: "Oswald", sans-serif;
   }
 
-  .text {
+  .text-17px {
     font-size: 17px;
   }
   
@@ -68,7 +63,7 @@
   }
   
   .hover-menu:hover {
-    background-color: #c3ac6e;
+    color: #c3ac6e;
   }
   
   .dropdown-menu {
@@ -76,8 +71,13 @@
     border-radius: 0 !important;
     left: -1px !important;
     border: none !important;
+    padding-left: 10px !important;
   }
   
+  .nav-link {
+  padding-left: 20px !important;
+}
+
   .dropdown-menu.show {
     background-color: #000 !important;
   }
@@ -100,7 +100,7 @@
   .custom-toggler {
     border: none !important;
   }
-  
+
   .custom-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
@@ -110,7 +110,46 @@
     box-shadow: none;
     border-color: white !important;
   }
+
+  /* --- Language Badge --- */
+  .language-badge {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    background-color: #cfad6c;
+    padding: 0 10px;
+    transition: all 0.3s ease;
+  }
   
+  .language-badge:hover {
+    background-color: #cfad6c;
+    height: 50px;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    text-decoration: underline;
+  }
+  
+  .language-text {
+    color: #222;
+    font-weight: 500;
+    text-decoration: none !important;
+  }
+ 
+  .language-badge-inside {
+    background-color: #cfad6c;
+    padding: 5px 10px;
+    align-self: center;
+    margin-right: 30px;
+    display: block;
+  }
+  
+  .margin-left {
+    margin-left: 40px;
+  }
+  
+  .nav-link {
+    padding-left: 20px !important;
+    white-space: nowrap;
+  }
   /* ==========================================================================
      3. Carrousel
      ==========================================================================  */
@@ -215,7 +254,6 @@
     }
   }
   
-
   /* --- Très petits écrans (≤ 354px) --- */
   @media (max-width: 354px) {
     .menu-logo .logo {
@@ -237,7 +275,7 @@
     }
   
     .navbar-nav {
-      padding: 10px 50px 20px !important;
+      padding: 10px 20px 20px !important;
     }
   
     .ps-3-responsive {
@@ -259,10 +297,6 @@
     .navbar-toggler {
       display: none !important;
     }
-/*   
-    .language-badge-inside {
-      display: inline-block !important;
-    } */
 
     .image-wrapper {
       overflow: hidden;
@@ -297,7 +331,6 @@
     }
   }
  
-  
   /* --- Écrans spécifiques (≤ 1029.98px) --- */
   @media (max-width: 1029.98px) {
     .margin-left {
@@ -305,37 +338,3 @@
     }
   }
   
-  /* --- Language Badge --- */
-  .language-badge {
-    position: absolute;
-    top: 0;
-    right: 30px;
-    background-color: #cfad6c;
-    padding: 0 10px;
-    transition: all 0.3s ease;
-  }
-  
-  .language-badge:hover {
-    background-color: #cfad6c;
-    height: 50px;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-    text-decoration: underline;
-  }
-  
-  .language-text {
-    color: #222;
-    font-weight: bold;
-    text-decoration: none !important;
-  }
-  
-  .language-badge-inside {
-    background-color: #cfad6c;
-    padding: 5px 10px;
-    align-self: center;
-    margin-right: 30px;
-    display: block;
-  }
-  
-  .margin-left {
-    margin-left: 40px;
-  }
