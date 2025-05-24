@@ -1,64 +1,10 @@
-
-
-            // function RegexName() {
-            //     const inputNameValue = inputName.value;
-            //     const regexName = /^[a-zA-Z\s-]+$/;
-            //   if (regexName.test(inputNameValue)) {
-            //     // Le nom est valide color border vert sur le input nom avec une classe css
-            //     inputName.classList.remove("is-invalid");
-            //     inputName.classList.add("is-valid");
-            //   } 
-            //     else {
-            //     // Le nom est invalide color border rouge sur le input nom avec une classe css
-            //     inputName.classList.remove("is-valid");
-            //     inputName.classList.add("is-invalid");
-            //   }
-            // }
-            // // Ecouteur d'événement pour le champ input
-            // inputName.addEventListener("input", function () {
-            //     RegexName();
-            // });
-
-            // Même chose pour le prénom
-
-            // function RegexPrenom() {
-            //     const inputPrenomValue = inputPrenom.value;
-            //     const regexPrenom = /^[a-zA-Z\s-]+$/;
-            //     if (regexPrenom.test(inputPrenomValue)) {
-            //         // Le prénom est valide color border vert sur le input prenom avec une classe css
-            //         inputPrenom.classList.remove("is-invalid");
-            //         inputPrenom.classList.add("is-valid");
-            //     } 
-            //     else {
-            //         // Le prénom est invalide color border rouge sur le input prenom avec une classe css
-            //         inputPrenom.classList.remove("is-valid");
-            //         inputPrenom.classList.add("is-invalid");
-            //     }
-            // }
-            // // Ecouteur d'événement pour le champ input
-            // inputPrenom.addEventListener("input", function () {
-            //     RegexPrenom();
-            // });
-
-            // const form = document.querySelector("form");
-            // form.addEventListener("submit", function (event) {
-            //     RegexName();
-            //     if (inputName.classList.contains("is-valid")) {
-            //         alert("Formulaire soumis avec succès !");
-            //     } else {
-            //         // Empêche l'envoi du formulaire si le nom est invalide
-            //         event.preventDefault();
-            //         // Affiche un message d'erreur ou une alerte
-                  
-            //         alert("Veuillez corriger les erreurs avant de soumettre le formulaire.");
-            //     }
-            // });
             const inputName = document.getElementById("nom");
-            const inputEmail = document.getElementById("email");
-            const inputTel = document.getElementById("tel");
             const inputPrenom = document.getElementById("prenom");
+            const inputTel = document.getElementById("tel");
+            const inputEmail = document.getElementById("email");
             const textArea = document.getElementById("msg")
 
+            // Regex expression régulière partielle utilisée pour valider
             const inputs = [
                 {
                     element : inputName,
@@ -86,8 +32,6 @@
             inputs.forEach(input => {
                     input.element.addEventListener("input", function (e) {
                         RegexTest(this, input.regex);
-                        // RegexTest(e.target, input.regex);
-                        // RegexTest(input.element, input.regex);
                     });
             });
             
