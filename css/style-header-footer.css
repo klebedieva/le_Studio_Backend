@@ -73,10 +73,7 @@
     padding-left: 10px !important;
   }
   
-  .nav-link {
-  padding-left: 20px !important;
-}
-
+  
   .dropdown-menu.show {
     background-color: #000 !important;
   }
@@ -99,18 +96,18 @@
   .custom-toggler {
     border: none !important;
   }
-
+  
   .custom-toggler .fa-bars {
     color: white; 
     font-size: 24px; 
     transition: color 0.3s ease; 
   }
-
+  
   .custom-toggler:focus,
   .custom-toggler:active {
     box-shadow: none;
   }
-
+  
   /* --- Language Badge --- */
   .language-badge {
     position: absolute;
@@ -133,7 +130,7 @@
     font-weight: 500;
     text-decoration: none !important;
   }
- 
+  
   .language-badge-inside {
     background-color: #cfad6c;
     padding: 5px 10px;
@@ -149,10 +146,11 @@
   .nav-link {
     padding-left: 20px !important;
     white-space: nowrap;
-  }
+  } 
+
   /* ==========================================================================
-     3. Carrousel
-     ==========================================================================  */
+  3. Carrousel
+  ==========================================================================  */
   .carousel-indicators .round-btn {
     width: 15px !important;
     height: 15px !important;
@@ -248,7 +246,7 @@
   /* --- Très petits écrans (≤ 354px) --- */
   @media (max-width: 354px) {
     .menu-logo .logo {
-      padding: 0 0 0 20px;
+      padding-left: 20px;
       margin: 0;
       height: 50px;
     }
@@ -264,7 +262,7 @@
       width: 100% !important;
       background-color: #000 !important;
     }
-  
+
     .navbar-nav {
       padding: 10px 20px 20px !important;
     }
@@ -282,6 +280,11 @@
   @media (min-width: 992px) {
     .navbar-toggler {
       display: none !important;
+    }
+
+    .menu-logo .logo {
+      height: 50px;
+      padding-left: 20px;
     }
 
     .image-wrapper {
@@ -312,7 +315,7 @@
     }
 
     .footer2 img,
-    .footer .mb-3 {
+    .footer {
       cursor: pointer;
     }
   }
@@ -320,7 +323,7 @@
   /* --- Écrans spécifiques (≤ 1029.98px) --- */
   @media (max-width: 1029.98px) {
     .margin-left {
-      margin-left: 0 !important;
+      margin-left: 10px !important;
     }
   }
   
