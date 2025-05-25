@@ -12,64 +12,62 @@
    ========================================================================== */
 
 .overlay-banner {
-  background-color: #000000; 
-  opacity: 0.6;
+    background-color: #000000; 
+    opacity: 0.6;
 }
 
 .image-banner {
-  object-fit: cover; 
-  height: 300px;
+    object-fit: cover; 
+    height: 300px;
 }
 
 .section-training h2 {
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .section-training p {
-  font-size: 18px;
-  line-height: 1.5;
-  color: #333;
-  margin-bottom: 20px;
-  text-align: justify;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify;
 }
 
 .float-slider {
-  float: right;
-  width: 40%;
-  margin-left: 32px;
-  margin-bottom: 16px;
+    float: right;
+    width: 40%;
+    margin-left: 32px;
+    margin-bottom: 20px;
 }
 
 .btn-custom {
-  background-color: #8b6928;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 0;
-  transition: background-color 0.3s;
+    /* Style existant : bouton stylisé */
+    background-color: #8b6928;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 0;
+    transition: background-color 0.3s;
+    width: 100% !important;
 }
 
 .btn-custom:hover {
-  background-color: #b8972e;
+    background-color: #b8972e;
 }
 
 /* ==========================================================================
    2. Carrousel
    ========================================================================== */
-#carouselExampleSlidesOnly {
-  flex-grow: 1;
-}
-/* Caroussel 3 images */
+
+/* Carrousel 3 images */
 #carouselExampleSlidesOnly .carousel-inner, 
 #carouselExampleSlidesOnly .carousel-item,
 #carouselExampleSlidesOnly .carousel-item img {
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
+    height: auto;
 }
 
 /* ==========================================================================
@@ -78,27 +76,19 @@
 
 /* --- Très petits écrans (≤ 575.98px) --- */
 @media (max-width: 575.98px) {
-  .section-training h2 {
-    font-size: 28px;
-  }
+    .section-training h2 {
+        font-size: 28px;
+    }
 
-  .section-training .float-slider {
-    float: none;
-    width: 100%;
-    margin-left: 0;
-    margin-top: 32px;
-  }
+    .section-training .float-slider {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 32px;
+    }
 
-  .btn-custom {
-    display: block;
-    margin-bottom: 16px;
-  }
-
-  #carouselExampleSlidesOnly {
-    margin-top: 40px;
-    height: auto;
-  }
+    #carouselExampleSlidesOnly {
+        margin-top: 40px;
+        height: auto;
+    }
 }
-
-
-
