@@ -3,6 +3,7 @@
             const inputTel = document.getElementById("tel");
             const inputEmail = document.getElementById("email");
             const inputMsg = document.getElementById("msg")
+            const form = document.querySelector("form");
 
             // Regex expression régulière partielle utilisée pour valider
             const inputs = [
@@ -84,3 +85,22 @@
                     errorDiv.textContent = message;
                 }
             }
+
+           // Ecouteur d'événement pour le bouton d'envoi
+           form.addEventListener("submit", function (e) {
+               // Vérifie si tous les champs sont valides
+               let allValid = true;
+               inputs.forEach(input => {
+                   if (!input.element.classList.contains("is-valid")) {
+                       allValid = false;
+                   }
+               });
+
+               if (allValid) {
+                   alert("Formulaire soumis avec succès !");
+               } else {
+                   // Empêche l'envoi du formulaire si un champ est invalide
+                   e.preventDefault();
+                   alert("Veuillez corriger les erreurs avant de soumettre le formulaire.");
+               }
+           });

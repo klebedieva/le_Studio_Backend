@@ -24,6 +24,18 @@
     <link rel="stylesheet" href="./css/style-header-footer.css" />
     <link rel="stylesheet" href="./css/style-contact.css" />
 
+    <!-- partager le lien sur les réseaux sociaux -->
+    <meta property="og:title" content="Contactez-nous - Studio Sport & Coaching">
+    <meta property="og:description" content="Contactez notre studio à Biarritz via notre formulaire ou par téléphone.">
+    <meta property="og:image" content="./assets/img/logo.png">
+    <meta property="og:type" content="website">
+
+
+    <!-- Balises SEO -->
+    <meta name="description" content="Contactez Studio Sport & Coaching à Biarritz. Remplissez notre formulaire ou appelez-nous directement.">
+    <meta name="keywords" content="contact sport Biarritz, studio coaching, formulaire sport, entraînement Biarritz">
+    <meta name="author" content="Studio Sport & Coaching">
+
     <title>LE STUDIO - Contact</title>
   </head>
 
@@ -258,6 +270,10 @@
             </div>
             <div class="text-center text-md-start">
               <button type="submit" class="btn mb-5">ENVOYER</button>
+               <!-- Message de confirmation : Masqué par défaut -->
+          <div class="confirmation-message d-none text-center text-md-start mt-3">
+            Votre message a été envoyé !
+          </div>
             </div>
           </form>
         </div>
@@ -402,15 +418,14 @@
       </div>
 
       <!-- Informations du footer -->
-      <div class="footer text-white p-3">
-        <div class="container-lg">
+      <div class="footer text-white py-5 px-3">
+        <div class="container-xl">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 fw-light">
               <img
                 src="./assets/img/logo_footer.png"
                 alt="Le Studio"
                 class="mb-3"
-                style="height: 50px"
               />
               <h5 class="fw-bold m-b-30 m-t-20 d-inline-block ps-4">
                 A PROPOS
@@ -420,13 +435,13 @@
               <p class="mb-0">Biarritz – RCS : 000 000 000</p>
               <p class="text-decoration-underline">Mentions Légales</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 fw-light">
               <h5 class="fw-bold m-b-30 m-t-20">STUDIO SPORT CORPORATE</h5>
               <p class="mb-1">- Crossfit Biarritz</p>
               <p class="mb-1">- Studio Center: créer votre studio</p>
               <p class="mb-1">- Devenir partenaire</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 fw-light">
               <h5 class="fw-bold m-b-30 m-t-20">
                 FITNESS, CROSSFIT ET TRAINING AU PAYS BASQUE
               </h5>
@@ -441,7 +456,7 @@
         </div>
       </div>
 
-      <!-- Crédits -->
+      <!-- info -->
       <div class="footer2 py-3">
         <div
           class="d-flex justify-content-center align-items-center flex-column flex-md-row"
