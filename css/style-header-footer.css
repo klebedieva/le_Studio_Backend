@@ -12,318 +12,417 @@
 
 /* ==========================================================================
    1. Typographie
+   Description : Définit les polices et tailles pour les titres, textes et navigation
    ========================================================================== */
    .font-oswald {
+    /* Applique la police Oswald (Google Fonts) pour les titres et navigation */
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-  }
-  
-  .font-oswald a {
+}
+
+.font-oswald a {
+    /* Définit le poids de police à 400 pour les liens dans la navigation */
     font-weight: 400;
-  }
-  
-  .roboto {
+}
+
+.roboto {
+    /* Applique la police Roboto (Google Fonts) pour les paragraphes */
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-  }
+    font-variation-settings: "wdth" 100;
+}
 
-  p {
+p {
+    /* Applique Roboto à tous les paragraphes pour une lisibilité optimale */
     font-family: "Roboto", sans-serif;
-  }
+}
 
-  h1, h2, h3, h5 {
+h1, h2, h3, h5 {
+    /* Applique Oswald aux titres pour un style audacieux */
     font-family: "Oswald", sans-serif;
-  }
+}
 
-  .text-17px {
+.text-17px {
+    /* Définit une taille de 17px pour le texte des liens de navigation */
     font-size: 17px;
-  }
-  
-  /* ==========================================================================
-     2. Navigation
-     ========================================================================== */
+}
 
-  .menu-logo .logo {
+/* ==========================================================================
+   2. Navigation
+   Description : Styles pour la barre de navigation, le logo, les liens et le menu déroulant
+   ========================================================================== */
+.menu-logo .logo {
+    /* Style du logo : hauteur 60px, marge gauche 30px pour l'alignement */
     height: 60px;
     padding-left: 30px;
-  }
-  
-  .color-menu li a {
+}
+
+.color-menu li a {
+    /* Couleur noire pour tous les liens du menu */
     color: #000 !important;
-  }
-  
-  .color-menu li:not(.language-badge) a {
+}
+
+.color-menu li:not(.language-badge) a {
+    /* Couleur blanche pour les liens sauf le badge de langue */
     color: #FFF !important;
-  }
-  
-  .hover-menu:hover {
+}
+
+.hover-menu:hover {
+    /* Change la couleur au survol en doré (#c3ac6e) pour interaction */
     color: #c3ac6e;
-  }
-  
-  .dropdown-menu {
+}
+
+.dropdown-menu {
+    /* Style du menu déroulant : sans bordure, aligné à gauche */
     margin: 0 !important;
     border-radius: 0 !important;
     left: -1px !important;
     border: none !important;
     padding-left: 10px !important;
-  }
-  
-  
-  .dropdown-menu.show {
+}
+
+.dropdown-menu.show {
+    /* Fond noir pour le menu déroulant lorsqu'il est affiché */
     background-color: #000 !important;
-  }
-  
-  .nav-link.dropdown-toggle[aria-expanded="true"] {
+}
+
+.nav-link.dropdown-toggle[aria-expanded="true"] {
+    /* Fond doré et texte blanc pour le lien actif du menu déroulant */
     background-color: #c3ac6e !important;
     color: #fff !important;
-  }
-  
-  .dropdown-item.active,
-  .dropdown-item:active {
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    /* Fond doré et texte blanc pour les éléments actifs du menu déroulant */
     background-color: #c3ac6e !important;
     color: #fff !important;
-  }
-  
-  .dropdown-item.hover-dropdown:hover {
+}
+
+.dropdown-item.hover-dropdown:hover {
+    /* Fond doré au survol des éléments du menu déroulant */
     background-color: #c3ac6e !important;
-  }
-  
-  .custom-toggler {
+}
+
+.custom-toggler {
+    /* Bouton du menu mobile : sans bordure */
     border: none !important;
-  }
-  
-  .custom-toggler .fa-bars {
-    color: white; 
-    font-size: 24px; 
-    transition: color 0.3s ease; 
-  }
-  
-  .custom-toggler:focus,
-  .custom-toggler:active {
+}
+
+.custom-toggler .fa-bars {
+    /* Icône du menu mobile : blanche, 24px, transition douce */
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.custom-toggler:focus,
+.custom-toggler:active {
+    /* Supprime l'ombre au focus ou clic du bouton mobile */
     box-shadow: none;
-  }
-  
-  /* --- Language Badge --- */
-  .language-badge {
+}
+
+/* --- Language Badge --- */
+.language-badge {
+    /* Badge de langue : positionné en haut à droite, fond doré */
     position: absolute;
     top: 0;
     right: 30px;
     background-color: #cfad6c;
     padding: 0 10px;
     transition: all 0.3s ease;
-  }
-  
-  .language-badge:hover {
+}
+
+.language-badge:hover {
+    /* Effet au survol : forme polygonale, soulignement */
     background-color: #cfad6c;
     height: 50px;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
     text-decoration: underline;
-  }
-  
-  .language-text {
+}
+
+.language-text {
+    /* Texte du badge : couleur sombre, sans soulignement */
     color: #222;
     font-weight: 500;
     text-decoration: none !important;
-  }
-  
-  .language-badge-inside {
+}
+
+.language-badge-inside {
+    /* Conteneur interne du badge sur mobile */
     background-color: #cfad6c;
     padding: 5px 10px;
     align-self: center;
     margin-right: 30px;
     display: block;
-  }
-  
-  .margin-left {
+}
+
+.margin-left {
+    /* Marge gauche de 40px pour espacer certains éléments */
     margin-left: 40px;
-  }
-  
-  .nav-link {
+}
+
+.nav-link {
+    /* Style des liens de navigation : padding gauche, sans retour à la ligne */
     padding-left: 20px !important;
     white-space: nowrap;
-  } 
+}
 
-  /* ==========================================================================
-  3. Carrousel
-  ==========================================================================  */
-  .carousel-indicators .round-btn {
+/* ==========================================================================
+   3. Carrousel
+   Description : Styles pour les indicateurs du carrousel
+   ========================================================================== */
+.carousel-indicators .round-btn {
+    /* Boutons indicateurs : cercles de 15px, gris */
     width: 15px !important;
     height: 15px !important;
     border-radius: 50% !important;
     background-color: #ccc;
     border: none !important;
     margin: 0 4px !important;
-  }
-  
-  .carousel-indicators .round-btn.active {
+}
+
+.carousel-indicators .round-btn.active {
+    /* Indicateur actif : fond doré (#c3ac6e) */
     background-color: #c3ac6e !important;
-  }
-  
-  /* ==========================================================================
-     4. Icônes sociales
-     ========================================================================== */
-  .icon {
+}
+
+.carousel-caption {
+    position: absolute;
+    left: 15% !important;
+    top: 50% !important;
+    padding: 0 !important;
+}
+
+/* ==========================================================================
+   4. Icônes sociales
+   Description : Styles pour les icônes de réseaux sociaux avec effet de survol
+   ========================================================================== */
+.icon {
+    /* Style de base des icônes : 27x27px, centrées, transition douce */
     display: inline-block;
     width: 27px;
     height: 27px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    transition: background-image 0.3s ease,
-    transform 0.3s ease;
+    transition: background-image 0.3s ease, transform 0.3s ease;
     cursor: pointer;
-  }
-  
-  .fhover {
+}
+
+.fhover {
+    /* Icône Facebook : image par défaut */
     background-image: url(/assets/img/icons8-facebook.svg);
-  }
-  
-  .fhover:hover {
+}
+
+.fhover:hover {
+    /* Icône Facebook au survol : image alternative, zoom */
     background-image: url(/assets/img/facebook-hover.svg);
     transform: scale(1.2);
-  }
-  
-  .ihover {
+}
+
+.ihover {
+    /* Icône Instagram : image par défaut */
     background-image: url(/assets/img/insta.svg);
-  }
-  
-  .ihover:hover {
+}
+
+.ihover:hover {
+    /* Icône Instagram au survol : image alternative, zoom */
     background-image: url(/assets/img/insta-hover.svg);
     transform: scale(1.2);
-  }
-  
-  .thover {
+}
+
+.thover {
+    /* Icône Tripadvisor : image par défaut, léger décalage */
     background-image: url(/assets/img/tripadvisor.svg);
     margin-left: 3px;
-  }
-  
-  .thover:hover {
+}
+
+.thover:hover {
+    /* Icône Tripadvisor au survol : image alternative, zoom */
     background-image: url(/assets/img/tripadvisor-hover.svg);
     transform: scale(1.2);
-  }
+}
 
-  /* ==========================================================================
-     5. Footer
-     ========================================================================== */
-  .footer {
+/* ==========================================================================
+   5. Footer
+   Description : Styles pour le footer et ses sous-sections
+   ========================================================================== */
+.footer {
+    /* Fond gris foncé pour la section principale du footer */
     background-color: #282828;
-  }
-  
-  .footer2 {
+}
+
+.footer2 {
+    /* Fond noir pour la sous-section du footer */
     background-color: #141414;
-  }
-  
-  .m-b-30 {
+}
+
+.m-b-30 {
+    /* Marge inférieure de 20px pour espacer les éléments */
     margin-bottom: 20px;
-  }
-  
-  .m-t-20 {
+}
+
+.m-t-20 {
+    /* Padding supérieur de 20px pour les titres */
     padding-top: 20px;
-  }
-  
-  .btn-insta {
+}
+
+.btn-insta {
+    /* Bouton Instagram : 200px, ombre légère */
     width: 200px;
     padding: 5px 8px;
     box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
-  }
-  
-  .box-img-insta {
+}
+
+.box-img-insta {
+    /* Images Instagram : 200px de haut, ajustées au conteneur */
     width: 100%;
     height: 200px;
     object-fit: cover;
-  }
-  
-  /* ==========================================================================
-     6. Responsive Design
-     ========================================================================== */
- 
-  
-  /* --- Très petits écrans (≤ 354px) --- */
-  @media (max-width: 354px) {
-    .menu-logo .logo {
-      padding-left: 20px;
-      margin: 0;
-      height: 50px;
-    }
-  
-    .carousel img {
-      height: 500px;
-    }
-  }
+}
 
-  /* --- Tablettes (≤ 991.98px) --- */
-  @media (max-width: 991.98px) {
+/* ==========================================================================
+   6. Responsive Design
+   Description : Ajustements pour différents écrans
+   ========================================================================== */
+
+/* --- Très petits écrans (≤ 354px) --- */
+@media (max-width: 354px) {
+    .menu-logo .logo {
+        /* Logo réduit à 50px, moins de padding pour petits écrans */
+        padding-left: 20px;
+        margin: 0;
+        height: 50px;
+    }
+
+    .carousel img {
+        /* Images du carrousel fixées à 500px de haut */
+        height: 500px;
+    }
+}
+
+/* --- Petits écrans (≤ 768px) --- */
+@media (max-width: 768px) {
+    .carousel-item img {
+        /* Images du carrousel à 500px pour mobiles */
+        height: 500px;
+    }
+
     .navbar-collapse {
-      width: 100% !important;
-      background-color: #000 !important;
+        /* Menu mobile : fond noir, pleine largeur */
+        width: 100% !important;
+        background-color: #000 !important;
     }
 
     .navbar-nav {
-      padding: 10px 20px 20px !important;
+        /* Padding pour le menu mobile */
+        padding: 10px 20px 20px !important;
     }
-  
+
     .ps-3-responsive {
-      padding-left: 20px !important;
+        /* Padding gauche pour les éléments du menu déroulant */
+        padding-left: 20px !important;
     }
 
     .box-hover-insta {
-      display: none;
+        /* Masque l'effet de survol Instagram sur mobile */
+        display: none;
     }
-  }
-  
-  /* --- Grands écrans (≥ 992px) --- */
-  @media (min-width: 992px) {
+}
+
+/* --- Tablettes (≤ 991.98px) --- */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        /* Menu mobile : fond noir */
+        width: 100% !important;
+        background-color: #000 !important;
+    }
+
+    .navbar-nav {
+        /* Padding pour le menu mobile */
+        padding: 10px 20px 20px !important;
+    }
+
+    .ps-3-responsive {
+        /* Padding gauche pour les éléments du menu déroulant */
+        padding-left: 20px !important;
+    }
+
+    .box-hover-insta {
+        /* Masque l'effet de survol Instagram sur tablettes */
+        display: none;
+    }
+}
+
+/* --- Grands écrans (≥ 992px) --- */
+@media (min-width: 992px) {
     .navbar-toggler {
-      display: none !important;
+        /* Masque le bouton mobile sur grands écrans */
+        display: none !important;
     }
 
     .menu-logo .logo {
-      height: 50px;
-      padding-left: 20px;
+        /* Logo réduit à 50px avec moins de padding */
+        height: 50px;
+        padding-left: 20px;
     }
 
     .image-wrapper {
-      overflow: hidden;
-      position: relative;
+        /* Conteneur pour les images Instagram avec superposition */
+        overflow: hidden;
+        position: relative;
     }
 
     .box-hover-insta {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      z-index: 1;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 16px;
-      font-size: 14px;
+        /* Superposition au survol pour Instagram : fond sombre, icônes */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        font-size: 14px;
     }
-    
+
     .image-wrapper:hover .box-hover-insta {
-      opacity: 1;
+        /* Affiche la superposition au survol */
+        opacity: 1;
     }
 
     .footer2 img,
     .footer img {
-      cursor: pointer;
+        /* Images du footer cliquables */
+        cursor: pointer;
     }
-  }
- 
-  /* --- Écrans spécifiques (≤ 1029.98px) --- */
-  @media (max-width: 1029.98px) {
+}
+
+/* --- Écrans spécifiques (≤ 1029.98px) --- */
+@media (max-width: 1029.98px) {
     .margin-left {
-      margin-left: 10px !important;
+        /* Réduit la marge gauche pour écrans intermédiaires */
+        margin-left: 10px !important;
     }
-  }
-  
+}
+
+/* --- Grands écrans (> 1251px) --- */
+@media (min-width: 1251px) {
+    .carousel-item img {
+        /* Images du carrousel : 700px, centrées */
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
