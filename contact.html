@@ -226,7 +226,23 @@
             src="./assets/img/bg_titre.jpg"
             alt="barre sous-titre"
           />
-          <form>
+
+          <!-- méthode POST meilleur niveau de sécurité -->
+          <!-- attribut action traitement fictif -->
+          <!-- jeton CSRF (Cross-Site Request Forgery) limite les attaques de type contrefaçon de requête -->
+          <form
+          method="POST"
+          action="/submit" 
+          >
+
+          <!-- Jeton placé en haut du formulaire, caché aux utilisateurs -->
+          <input 
+            type="hidden" 
+            name="csrf_token"
+            value="fake_token_123456 ----- valeur est un placeholder. En production, elle serait générée aléatoirement côté serveur et stockée en session" 
+            aria-hidden="true ----- Empêche les lecteurs d'écran de le lire" 
+            data-description="Jeton CSRF généré côté serveur"
+          />
             <div class="row mb-3">
               <div class="col-md-6 mb-3 mb-md-0">
                 <input
