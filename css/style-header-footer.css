@@ -356,6 +356,18 @@ h1, h2, h3, h5 {
         /* Masque l'effet de survol Instagram sur tablettes */
         display: none;
     }
+
+    .icon {
+      /* Style de base des icônes : 27x27px, centrées, transition douce */
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: background-image 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+  }
 }
 
 /* --- Grands écrans (≥ 992px) --- */
@@ -414,6 +426,14 @@ h1, h2, h3, h5 {
         /* Réduit la marge gauche pour écrans intermédiaires */
         margin-left: 10px !important;
     }
+}
+
+/* --- Grands écrans (≥ 1200px) --- */
+@media (min-width: 1200px) {
+  /* Agrandit les h2 du carrousel à 48px pour écrans ≥ 1200px */
+  .carousel-caption h2 {
+      font-size: 48px;
+  }
 }
 
 /* --- Grands écrans (> 1251px) --- */
