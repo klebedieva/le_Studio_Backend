@@ -2,6 +2,7 @@
             const inputPrenom = document.getElementById("prenom");
             const inputTel = document.getElementById("tel");
             const inputEmail = document.getElementById("email");
+            const inputSujet = document.getElementById("sujet")
             const inputMsg = document.getElementById("msg")
             const form = document.querySelector("form");
 
@@ -27,6 +28,11 @@
                     element : inputTel,
                     regex : /^[0-9]{10}$/,
                     message : "Le téléphone est invalide"
+                },
+                {
+                    element: inputSujet,
+                    regex: /^[a-zA-Zà-úÀ-Ú\s-]+$/, // Permet les accents français
+                    message: "Le sujet est requis"
                 },
                 {
                     element : inputMsg,
