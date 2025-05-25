@@ -358,7 +358,7 @@ h1, h2, h3, h5 {
     }
 
     .icon {
-      /* Style de base des icônes : 27x27px, centrées, transition douce */
+      /* Style de base des icônes */
       display: inline-block;
       width: 40px;
       height: 40px;
