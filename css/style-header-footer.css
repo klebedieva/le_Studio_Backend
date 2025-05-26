@@ -79,11 +79,6 @@ h1, h2, h3, h5 {
     padding-left: 10px !important;
 }
 
-.dropdown-menu.show {
-    /* Fond noir pour le menu déroulant lorsqu'il est affiché */
-    background-color: #000 !important;
-}
-
 .nav-link.dropdown-toggle[aria-expanded="true"] {
     /* Fond doré et texte blanc pour le lien actif du menu déroulant */
     background-color: #c3ac6e !important;
