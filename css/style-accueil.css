@@ -34,7 +34,7 @@
 .card {
     /* Cartes des actualités : sans bordure arrondie, transitions au survol */
     border-radius: 0px !important;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s;
     overflow: hidden;
 }
 

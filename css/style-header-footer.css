@@ -364,6 +364,7 @@ h1, h2, h3, h5 {
       background-size: contain;
       transition: background-image 0.3s ease, transform 0.3s ease;
       cursor: pointer;
+      margin-bottom: 20px;
   }
 }
 
