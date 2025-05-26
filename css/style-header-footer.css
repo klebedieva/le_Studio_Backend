@@ -169,6 +169,10 @@ h1, h2, h3, h5 {
     white-space: nowrap;
 }
 
+.nav-link:hover {
+    background-color: #cfad6c;
+}
+
 /* ==========================================================================
    3. Carrousel
    Description : Styles pour les indicateurs du carrousel
