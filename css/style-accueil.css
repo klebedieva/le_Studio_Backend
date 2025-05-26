@@ -31,14 +31,6 @@
     border-radius: 0px;
 }
 
-.read-more {
-    /* Liens "En savoir plus" : sans soulignement, transition douce */
-    color: #050505;
-    position: relative;
-    text-decoration: none !important;
-    transition: color 0.3s;
-}
-
 .card {
     /* Cartes des actualités : sans bordure arrondie, transitions au survol */
     border-radius: 0px !important;
@@ -202,10 +194,7 @@
         margin-bottom: 8px;
     }
 
-    .read-more {
-        /* Liens plus grands (20px) pour mobiles */
-        font-size: 20px;
-    }
+    
 
     h2.text-center {
         /* Titres réduits (19px) pour petits écrans */
@@ -239,10 +228,7 @@
         line-height: 1.4 !important;
     }
 
-    .read-more {
-        /* Liens à 16px avec bordure */
-        font-size: 16px;
-    }
+    
 
     .border-card {
         /* Bordure pour les liens des actualités */
@@ -293,7 +279,7 @@
         display: none;
     }
 
-    .read-more {
+    .white-border {
         /* Liens avec bordure pour tablettes */
         border: 1px solid #fff;
         padding: 5px 15px !important;
