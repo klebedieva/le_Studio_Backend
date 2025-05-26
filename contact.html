@@ -227,7 +227,7 @@
             alt="barre sous-titre"
           />
 
-          <!-- méthode POST meilleur niveau de sécurité -->
+          <!-- méthode POST meilleur niveau de sécurité et éviter l'exposition des données dans l'URL-->
           <!-- attribut action traitement fictif -->
           <!-- jeton CSRF (Cross-Site Request Forgery) limite les attaques de type contrefaçon de requête -->
           <form
@@ -238,8 +238,9 @@
           <!-- Jeton placé en haut du formulaire, caché aux utilisateurs -->
           <input 
             type="hidden" 
-            name="csrf_token"
-            value="fake_token_123456 ----- valeur est un placeholder. En production, elle serait générée aléatoirement côté serveur et stockée en session" 
+            name="csrf_token ----------nom standard, identifiant que le serveur utilisera pour retrouver le jeton"
+            value="fake_token_123456 ----- générée aléatoirement côté serveur et stockée en session -
+            fake_7h4nk3n_2024-05-25_987654 ressemble à un jeton réel (combinaison de texte + timestamp + chiffres)." 
             aria-hidden="true ----- Empêche les lecteurs d'écran de le lire" 
             data-description="Jeton CSRF généré côté serveur"
           />
