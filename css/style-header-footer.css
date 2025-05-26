@@ -45,11 +45,6 @@ h1, h2, h3, h5 {
     font-family: "Oswald", sans-serif;
 }
 
-.text-17px {
-    /* Définit une taille de 17px pour le texte des liens de navigation */
-    font-size: 17px;
-}
-
 /* ==========================================================================
    2. Navigation
    Description : Styles pour la barre de navigation, le logo, les liens et le menu déroulant
