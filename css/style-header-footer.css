@@ -90,9 +90,19 @@ h1, h2, h3, h5 {
     color: #fff !important;
 }
 
+.navbar-nav li {
+    margin: 0 10px;
+}
+
 .dropdown-item.active,
 .dropdown-item:active {
     /* Fond doré et texte blanc pour les éléments actifs du menu déroulant */
+    background-color: #c3ac6e !important;
+    color: #fff !important;
+}
+
+.contact-link.active,
+.contact-link:active {
     background-color: #c3ac6e !important;
     color: #fff !important;
 }
@@ -155,14 +165,7 @@ h1, h2, h3, h5 {
     display: block;
 }
 
-.margin-left {
-    /* Marge gauche de 40px pour espacer certains éléments */
-    margin-left: 40px;
-}
-
 .nav-link {
-    /* Style des liens de navigation : padding gauche, sans retour à la ligne */
-    padding-left: 20px !important;
     white-space: nowrap;
 }
 
@@ -210,35 +213,35 @@ h1, h2, h3, h5 {
 
 .fhover {
     /* Icône Facebook : image par défaut */
-    background-image: url(/assets/img/icons8-facebook.svg);
+    background-image: url(../assets/img/icons8-facebook.svg);
 }
 
 .fhover:hover {
-    /* Icône Facebook au survol : image alternative, zoom */
-    background-image: url(/assets/img/facebook-hover.svg);
+    /* Icône Facebook : image par défaut */
+    background-image: url(../assets/img/facebook-hover.svg);
     transform: scale(1.2);
 }
 
 .ihover {
     /* Icône Instagram : image par défaut */
-    background-image: url(/assets/img/insta.svg);
+    background-image: url(../assets/img/insta.svg);
 }
 
 .ihover:hover {
     /* Icône Instagram au survol : image alternative, zoom */
-    background-image: url(/assets/img/insta-hover.svg);
+    background-image: url(../assets/img/insta-hover.svg);
     transform: scale(1.2);
 }
 
 .thover {
     /* Icône Tripadvisor : image par défaut, léger décalage */
-    background-image: url(/assets/img/tripadvisor.svg);
+    background-image: url(../assets/img/tripadvisor.svg);
     margin-left: 3px;
 }
 
 .thover:hover {
     /* Icône Tripadvisor au survol : image alternative, zoom */
-    background-image: url(/assets/img/tripadvisor-hover.svg);
+    background-image: url(../assets/img/tripadvisor-hover.svg);
     transform: scale(1.2);
 }
 
@@ -313,9 +316,9 @@ h1, h2, h3, h5 {
         background-color: #000 !important;
     }
 
-    .navbar-nav {
+    .navbar-nav a {
         /* Padding pour le menu mobile */
-        padding: 10px 20px 20px !important;
+        padding: 10px !important;
     }
 
     .ps-3-responsive {
@@ -337,9 +340,9 @@ h1, h2, h3, h5 {
         background-color: #000 !important;
     }
 
-    .navbar-nav {
+    .navbar-nav a {
         /* Padding pour le menu mobile */
-        padding: 10px 20px 20px !important;
+        padding: 10px 20px !important;
     }
 
     .ps-3-responsive {
