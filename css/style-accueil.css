@@ -25,7 +25,7 @@
    2. Composants
    Description : Styles pour les boutons, cartes et liens
    ========================================================================== */
-.btn-custom {
+.btn-slider-info {
     /* Bouton du carrousel : marge inférieure, coins carrés */
     margin-bottom: 30px;
     border-radius: 0px;
@@ -38,7 +38,7 @@
     overflow: hidden;
 }
 
-.underline-center {
+.underline-anim {
     /* Soulignement animé centré pour les liens des activités */
     position: relative;
     display: inline-block;
@@ -48,7 +48,7 @@
     transition: color 0.3s ease;
 }
 
-.underline-center::after {
+.underline-anim::after {
     /* Animation du soulignement : part du centre, s'étend au survol */
     content: "";
     position: absolute;
@@ -61,12 +61,12 @@
     transition: width 0.3s ease;
 }
 
-.underline-center:hover::after {
+.underline-anim:hover::after {
     /* Étend le soulignement à 100% au survol */
     width: 100%;
 }
 
-.underline-link {
+.style-link {
     /* Soulignement animé pour les liens des actualités */
     position: relative;
     color: #111;
@@ -76,7 +76,7 @@
     width: fit-content;
 }
 
-.underline-link::after {
+.style-link::after {
     /* Animation du soulignement : part de 25%, s'étend à 100% */
     content: "";
     position: absolute;
@@ -91,7 +91,7 @@
     pointer-events: none;
 }
 
-.underline-link:hover::after {
+.style-link:hover::after {
     /* Étend le soulignement à 100% au survol */
     transform: scaleX(1);
 }
@@ -194,8 +194,6 @@
         margin-bottom: 8px;
     }
 
-    
-
     h2.text-center {
         /* Titres réduits (19px) pour petits écrans */
         font-size: 19px;
@@ -228,9 +226,16 @@
         line-height: 1.4 !important;
     }
 
-    
+    .btn-border-w-responsive {
+        /* Bordure pour les liens des actualités */
+        border: 1px solid #fff;
+        padding: 5px 15px;
+        text-align: center;
+        width: 200px;
+        margin-left: 0;
+    }
 
-    .border-card {
+    .btn-border-b-responsive {
         /* Bordure pour les liens des actualités */
         border: 1px solid #333;
         padding: 5px 15px;
@@ -274,23 +279,28 @@
         margin-bottom: 0px !important;
     }
 
-    .underline-center::after {
+    .underline-anim::after {
         /* Masque le soulignement pour tablettes */
         display: none;
     }
 
-    .white-border {
+    .anim-none-responsive::after {
+        /* Masque le soulignement pour tablettes */
+        display: none;
+    }
+
+    .btn-border-w-responsive {
         /* Liens avec bordure pour tablettes */
         border: 1px solid #fff;
         padding: 5px 15px !important;
         margin-top: 20px !important;
     }
 
-    .border-card {
-        /* Bordure pour les liens des actualités */
+    .btn-border-b-responsive {
+        /* Liens avec bordure pour tablettes */
         border: 1px solid #333;
-        padding: 5px 15px;
-        text-align: center;
+        padding: 5px 15px !important;
+        margin-top: 20px !important;
     }
 }
 
@@ -318,7 +328,7 @@
         object-fit: cover;
     }
 
-    .btn-custom {
+    .btn-slider-info {
         /* Boutons plus petits pour tablettes */
         padding: 8px 16px;
         font-size: 14px;
