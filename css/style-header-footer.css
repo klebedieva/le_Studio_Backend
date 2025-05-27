@@ -387,6 +387,11 @@ h1, h2, h3, h5 {
         position: relative;
     }
 
+    .image-wrapper:hover .box-hover-insta {
+        /* Affiche la superposition au survol */
+        opacity: 1;
+    }
+    
     .box-hover-insta {
         /* Superposition au survol pour Instagram : fond sombre, icônes */
         position: absolute;
@@ -406,23 +411,10 @@ h1, h2, h3, h5 {
         font-size: 14px;
     }
 
-    .image-wrapper:hover .box-hover-insta {
-        /* Affiche la superposition au survol */
-        opacity: 1;
-    }
-
     .footer2 img,
     .footer img {
         /* Images du footer cliquables */
         cursor: pointer;
-    }
-}
-
-/* --- Écrans spécifiques (≤ 1029.98px) --- */
-@media (max-width: 1029.98px) {
-    .margin-left {
-        /* Réduit la marge gauche pour écrans intermédiaires */
-        margin-left: 10px !important;
     }
 }
 
@@ -432,15 +424,12 @@ h1, h2, h3, h5 {
   .carousel-caption h2 {
       font-size: 48px;
   }
-}
 
-/* --- Grands écrans (> 1251px) --- */
-@media (min-width: 1251px) {
-    .carousel-item img {
-        /* Images du carrousel : 700px, centrées */
-        width: 100%;
-        height: 700px;
-        object-fit: cover;
-        object-position: center;
-    }
+  .carousel-item img {
+    /* Images du carrousel : 700px, centrées */
+    max-width: 100%;
+    height: 700px;
+    object-fit: cover;
+    object-position: center;
+}
 }
