@@ -1,0 +1,131 @@
+/* ===============================================
+   BANNIÈRE - Image pleine largeur
+   =============================================== */
+
+/* Conteneur de la bannière avec hauteur fixe */
+.banner-img {
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Image de la bannière en pleine largeur et hauteur */
+.banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===============================================
+   BLOG - Section Articles
+   =============================================== */
+
+/* Section du blog avec fond clair et espacements */
+#articles {
+  background-color: #f9f8f6;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Titre principal de la section articles */
+#articles h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* Liste verticale des articles avec espacement */
+#articles .article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Bloc individuel d’un article avec séparation */
+#articles .article-item {
+  padding-bottom: 50px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Titre de chaque article */
+#articles h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+/* Paragraphe d’introduction de l’article */
+#articles .article-paragraph {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Texte secondaire (ex. : date ou auteur) */
+#articles .text-muted {
+  font-size: 0.95rem;
+  color: #666 !important;
+}
+
+/* Image principale de l’article dans la carte */
+.news-image {
+  height: 230px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+}
+
+/* Effet zoom léger au survol de l’image */
+.news-image:hover {
+  transform: scale(1.03);
+}
+
+/* Sous-titre de section centré et lisible */
+.section-subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Hauteur minimale de la carte article */
+#articles .article-card {
+  min-height: 650px;
+}
+
+/* ===============================================
+   RESPONSIVE - Tablettes et mobiles
+   =============================================== */
+
+/* Réorganisation verticale et centrée des colonnes */
+@media (max-width: 768px) {
+  #articles .row {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  /* Réduction des marges sur petits écrans */
+  #articles .col-md-6 {
+    padding: 0 15px;
+  }
+
+  /* Taille du titre ajustée pour les tablettes */
+  #articles h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Taille des sous-titres réduite sur tablette */
+  #articles h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Paragraphe plus compact sur mobile */
+  #articles .article-paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}

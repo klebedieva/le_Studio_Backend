@@ -1,0 +1,90 @@
+/* Image de séparation (sous-titre) */
+.barre-decoration {
+  display: block;
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+/* Bouton de renouvellement */
+.abonnement-renouveler-btn {
+  background-color: #CFAD6C;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease-in-out;
+}
+
+.abonnement-renouveler-btn:hover {
+  background-color: #a8834e;
+  color: white;
+  text-decoration: none;
+}
+
+/* Liens colorés dans paragraphe */
+.text-color a {
+  color: #CFAD6C;
+  text-decoration: none;
+}
+
+/* Cartes d’actualités */
+.card {
+  border-radius: 0 !important;
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+
+/* Images des cartes (services) */
+.news-image {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.news-image:hover {
+  transform: scale(1.05);
+}
+
+/* Lien avec effet de soulignement animé */
+.style-link {
+  position: relative;
+  color: #111;
+  display: inline;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.style-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #111;
+  transform: scaleX(0.25);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+  pointer-events: none;
+}
+
+.style-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Image en bannière */
+.banner-img {
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

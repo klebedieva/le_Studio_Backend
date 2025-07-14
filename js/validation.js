@@ -1,112 +1,161 @@
-            const inputName = document.getElementById("nom");
-            const inputPrenom = document.getElementById("prenom");
-            const inputTel = document.getElementById("tel");
-            const inputEmail = document.getElementById("email");
-            const inputSujet = document.getElementById("sujet")
-            const inputMsg = document.getElementById("msg")
-            const form = document.querySelector("form");
+// On récupère les champs du formulaire par leur ID
+const inputName   = document.getElementById("nom");
+const inputPrenom = document.getElementById("prenom");
+const inputTel    = document.getElementById("tel");
+const inputEmail  = document.getElementById("email");
+const inputSujet  = document.getElementById("sujet");
+const inputMsg    = document.getElementById("msg");
+const inputPassword = document.getElementById("mot_de_passe"); 
+const form        = document.querySelector("form"); // le formulaire
 
-            // Regex expression régulière partielle utilisée pour valider
-            const inputs = [
-                {
-                    element : inputName,
-                    regex : /^[a-zA-Z\s-]+$/,
-                    message : "Le nom est invalide"
-                },
-                {
-                    element : inputPrenom,
-                    regex : /^[a-zA-Z\s-]+$/,
-                    message : "Le prénom est invalide"
+// Liste des champs à valider avec leurs règles
+const inputs = [
+  {
+    element: inputName,
+    regex: /^[a-zA-Z\s-]+$/, // lettres, espaces, tirets
+    message: "Le nom est invalide",
+    requiredMessage: "Le nom est obligatoire"
+  },
+  {
+    element: inputPrenom,
+    regex: /^[a-zA-Z\s-]+$/,
+    message: "Le prénom est invalide",
+    requiredMessage: "Le prénom est obligatoire"
+  },
+  {
+    element: inputEmail,
+    regex: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, // format email
+    message: "L'email est invalide",
+    requiredMessage: "L'email est obligatoire"
+  },
+  {
+    element: inputTel,
+    regex: /^[0-9]{10}$/, // numéro français à 10 chiffres
+    message: "Le téléphone est invalide"
+    // champ facultatif
+  },
+  {
+    element: inputSujet,
+    regex: /^[a-zA-Zà-úÀ-Ú\s-]*$/, // lettres accentuées + tirets
+    message: "Le sujet est invalide"
+    // champ facultatif
+  },
+  {
+    element: inputMsg,
+    regex: /^(?!.*<.*?>)[\s\S]{10,1000}$/, // min 10 caractères, sans balises HTML
+    message: "Le message doit contenir au moins 10 caractères",
+    requiredMessage: "Le message est obligatoire"
+  }
+];
 
-                },
-                {
-                    element : inputEmail,
-                    regex : /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                    message : "L'email est invalide"
-                },
-                {
-                    element : inputTel,
-                    regex : /^[0-9]{10}$/,
-                    message : "Le téléphone est invalide"
-                },
-                {
-                    element: inputSujet,
-                    regex: /^[a-zA-Zà-úÀ-Ú\s-]+$/, // Permet les accents français
-                    message: "Le sujet est requis"
-                },
-                {
-                    element : inputMsg,
-                    regex: /^(?!.*<.*?>)[\s\S]{10,1000}$/, /*
-                    == (?!.*<.*?>) interdit les balises HTML (par exemple, <p>, <div>, <script>) ==
-                    == [\s\S] atorise les caractères, y compris les espaces (\s) et non-espaces (\S) ==
-                    */
-                    message : "Le message est invalide"
-                }
-            ]
-              
-            inputs.forEach(input => {
-                    input.element.addEventListener("input", function (e) {
-                        RegexTest(this, input.regex, input.message);
-                    });
-            });
-            
-             function RegexTest(input, regex, message = "Le champ est invalide") {
-                const inputValue = input.value;
+if (window.location.pathname.includes("registration.php")) {
+  inputs.push({
+    element: inputPassword,
+    regex: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+    message: "Le mot de passe doit contenir au moins 8 caractères, une majuscule, un chiffre et un symbole spécial.",
+    requiredMessage: "Le mot de passe est obligatoire"
+  });
+}
 
-                // Vérifie s'il y a déjà un message d'erreur juste après l'input
-                
-                // Récupère l'élément suivant de l'input
-                let errorDiv = input.nextElementSibling;
-                // Vérifie si l'élément suivant est n'est pas une div
-                if (!errorDiv) {
-                    errorDiv = null; // Réinitialise errorDiv si ce n'est pas une div
-                }
-                
-                if (regex.test(inputValue)) {
-                    input.classList.remove("is-invalid");
-                    input.classList.add("is-valid");
+// Validation en direct quand on tape dans un champ
+inputs.forEach(input => {
+  if (!input.element) return; // si l'élément n'existe pas, on ne fait rien
 
-                    // Si un message d’erreur est déjà affiché, on le supprime
-                    if (errorDiv) errorDiv.remove();
-                } 
-                else if (inputValue.length === 0) {
-                    input.classList.remove("is-valid");
-                    input.classList.remove("is-invalid");
-                    // Si un message d’erreur est déjà affiché, on le supprime
-                    if (errorDiv) errorDiv.remove();
-                }
-                else {
-                    input.classList.remove("is-valid");
-                    input.classList.add("is-invalid");
-                    // Si le message d'erreur n'existe pas, on le crée
-                    if (!errorDiv) {
-                        // Crée un nouvel élément div pour le message d'erreur
-                        errorDiv = document.createElement("div");
-                        // Ajoute une classe CSS pour le style
-                        errorDiv.classList.add("text-danger");
-                        // Ajoute le message d'erreur au div
-                        input.after(errorDiv);
-                    }
-                    // Met à jour le contenu du message d'erreur
-                    errorDiv.textContent = message;
-                }
-            }
+  input.element.addEventListener("input", () => {
+    const el = input.element;
+    const value = el.value.trim();
+    let errorDiv = el.nextElementSibling;
 
-           // Ecouteur d'événement pour le bouton d'envoi
-           form.addEventListener("submit", function (e) {
-               // Vérifie si tous les champs sont valides
-               let allValid = true;
-               inputs.forEach(input => {
-                   if (!input.element.classList.contains("is-valid")) {
-                       allValid = false;
-                   }
-               });
+    // Supprime l'ancien message d'erreur s’il existe
+    if (errorDiv && errorDiv.classList.contains("text-danger-js")) {
+      errorDiv.remove();
+    }
 
-               if (allValid) {
-                   alert("Formulaire soumis avec succès !");
-               } else {
-                   // Empêche l'envoi du formulaire si un champ est invalide
-                   e.preventDefault();
-                   alert("Veuillez corriger les erreurs avant de soumettre le formulaire.");
-               }
-           });
+    // Si le champ est vide
+    if (value === "") {
+      if (input.requiredMessage) {
+        el.classList.remove("is-valid");
+        el.classList.add("is-invalid");
+
+        const error = document.createElement("div");
+        error.classList.add("text-danger", "text-danger-js");
+        error.textContent = input.requiredMessage;
+        el.after(error);
+      } else {
+        el.classList.remove("is-invalid");
+        el.classList.remove("is-valid");
+      }
+    }
+    // Si le champ ne correspond pas à la regex
+    else if (!input.regex.test(value)) {
+      el.classList.remove("is-valid");
+      el.classList.add("is-invalid");
+
+      const error = document.createElement("div");
+      error.classList.add("text-danger", "text-danger-js");
+      error.textContent = input.message;
+      el.after(error);
+    }
+    // Si tout est bon
+    else {
+      el.classList.remove("is-invalid");
+      el.classList.add("is-valid");
+    }
+  });
+});
+
+// Validation quand on envoie le formulaire
+if (form) { // vérifie que le formulaire existe
+  form.addEventListener("submit", function (e) {
+    let allValid = true;
+
+    inputs.forEach(input => {
+      if (!input.element) return; // si l'élément n'existe pas, on l'ignore
+
+      const el = input.element;
+      const value = el.value.trim();
+      let errorDiv = el.nextElementSibling;
+
+      // Supprimer les anciens messages d'erreur
+      if (errorDiv && errorDiv.classList.contains("text-danger-js")) {
+        errorDiv.remove();
+      }
+
+      // Vérifie si le champ est vide
+      if (value === "") {
+        if (input.requiredMessage) {
+          el.classList.remove("is-valid");
+          el.classList.add("is-invalid");
+
+          const error = document.createElement("div");
+          error.classList.add("text-danger", "text-danger-js");
+          error.textContent = input.requiredMessage;
+          el.after(error);
+          allValid = false;
+        }
+      }
+      // Vérifie si la valeur respecte la règle
+      else if (!input.regex.test(value)) {
+        el.classList.remove("is-valid");
+        el.classList.add("is-invalid");
+
+        const error = document.createElement("div");
+        error.classList.add("text-danger", "text-danger-js");
+        error.textContent = input.message;
+        el.after(error);
+        allValid = false;
+      }
+      // Tout est bon
+      else {
+        el.classList.remove("is-invalid");
+        el.classList.add("is-valid");
+      }
+    });
+
+    // Si un champ n'est pas valide, on empêche l'envoi
+    if (!allValid) {
+      e.preventDefault();
+      alert("Veuillez corriger les erreurs avant de soumettre le formulaire.");
+    }
+  });
+}

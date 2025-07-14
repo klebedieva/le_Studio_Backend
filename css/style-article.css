@@ -1,0 +1,156 @@
+/* Style global du corps de la page */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Conteneur principal de l'article */
+.article-container {
+  margin-top: 40px;
+}
+
+/* Carte blanche contenant l'article */
+.article-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+/* Titre principal de l'article */
+.article-card h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Informations comme date et auteur */
+.article-meta {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 25px;
+}
+
+/* Paragraphes du contenu de l'article */
+.article-body p {
+  line-height: 1.8;
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+/* Style des tags affichés sous l'article */
+.tag {
+  display: inline-block;
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  margin-right: 8px;
+  margin-top: 10px;
+}
+
+/* Conteneur centré pour l'image principale */
+.article-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Image ou carrousel à l'intérieur de l'article */
+.article-image-wrapper img,
+.article-image-wrapper .carousel {
+  width: 60%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Image en haut des cartes secondaires */
+.small-card .card-img-top {
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* Titre des petites cartes (articles similaires) */
+.small-card .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Texte des petites cartes */
+.small-card .card-text {
+  font-size: 0.85rem;
+}
+
+/* Bouton dans les petites cartes */
+.small-card .btn {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+}
+
+/* Images dans différents blocs d'article */
+.article-container img,
+.article-content img,
+#contenu img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Images dans le corps de l'article, en ligne */
+.article-body img {
+  max-width: 48%;
+  height: auto;
+  display: inline-block;
+}
+
+/* Images avec attribut width (forcées à 100%) */
+.article-body img[width] {
+  width: 100% !important;
+}
+
+/* Images avec attribut height (hauteur auto) */
+.article-body img[height] {
+  height: auto !important;
+}
+
+/* Paragraphe contenant des images (affichage en flex) */
+.article-body p:has(img) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Adaptation du padding et des images sur tablette */
+@media (max-width: 768px) {
+  .article-card {
+    padding: 25px;
+  }
+
+  .article-image-wrapper img,
+  .article-image-wrapper .carousel {
+    width: 90%;
+  }
+}
+
+/* Affichage en colonne des images sur mobile */
+@media (max-width: 600px) {
+  .article-body p:has(img) {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .article-body img {
+    max-width: 100%;
+  }
+}

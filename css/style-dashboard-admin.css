@@ -1,0 +1,41 @@
+/* Image en bannière */
+.banner-img {
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Lien avec effet de soulignement animé */
+.style-link {
+  position: relative;
+  color: #111;
+  display: inline;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.style-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #111;
+  transform: scaleX(0.25);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+  pointer-events: none;
+}
+
+.style-link:hover::after {
+  transform: scaleX(1);
+}

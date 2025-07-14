@@ -1,0 +1,18 @@
+{
+    "name": "karina/le_studio_backend",
+    "description": "Formulaire de contact du site Le Studio",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Karina\\LeStudioBackend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "karyna.lebedieva",
+            "email": "karyna.lebedieva@gmail.com"
+        }
+    ]
+}
