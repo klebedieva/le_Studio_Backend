@@ -390,18 +390,17 @@ unset($_SESSION['success']);
             font-weight: bold;
         }
 
-        /* .progress-circle {
+        .progress-circle {
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: conic-gradient(var(--studio-gold) <?php echo ($visits_this_month * 24); ?>%, #e9ecef <?php echo ($visits_this_month * 24); ?>%);
+            background: conic-gradient(var(--studio-gold) calc(3deg * <?php echo (int)$visits_this_month; ?>), #e9ecef 0deg 360deg);
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1rem;
             position: relative;
-        } */
-
+        }
         .progress-circle::before {
             content: '';
             width: 90px;
@@ -409,11 +408,14 @@ unset($_SESSION['success']);
             background: white;
             border-radius: 50%;
             position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
         }
-
         .progress-text {
             position: relative;
-            z-index: 1;
+            z-index: 2;
             font-size: 1.5rem;
             font-weight: bold;
             color: var(--studio-dark);
@@ -501,6 +503,13 @@ unset($_SESSION['success']);
     </style>
 </head>
 <body>
+    <?php if (isset($_SESSION['error'])): ?>
+        <div class="alert alert-danger alert-dismissible fade show text-center mb-0" role="alert" style="border-radius:0;">
+            <?= htmlspecialchars($_SESSION['error']) ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer"></button>
+        </div>
+        <?php unset($_SESSION['error']); ?>
+    <?php endif; ?>
     <!-- Header -->
     <header class="header">
         <div class="container">

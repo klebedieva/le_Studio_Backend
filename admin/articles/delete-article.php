@@ -8,11 +8,9 @@ if (!isset($_SESSION['user']['id_user'], $_SESSION['user']['role'])) {
     header("Location: ../../admin.php?tab=articles");
     exit;
 }
-
-// Vérifie si le rôle de l'utilisateur est autorisé à supprimer un article
-$roles_autorises = ['Administrateur', 'Modérateur'];
-if (!in_array($_SESSION['user']['role'], $roles_autorises)) {
-    $_SESSION['error'] = "Vous n'avez pas les droits pour supprimer un article.";
+// Только администратор может удалять
+if ($_SESSION['user']['role'] !== 'Administrateur') {
+    $_SESSION['error'] = "Seul un administrateur peut supprimer des articles.";
     header("Location: ../../admin.php?tab=articles");
     exit;
 }

@@ -1,6 +1,13 @@
 <?php
 session_start();
 
+// Rediriger les utilisateurs non-admins
+if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] === 'Utilisateur') {
+    $_SESSION['error'] = "Vous n'avez pas accès à l'administration.";
+    header('Location: dashboard-client.php');
+    exit;
+}
+
 // 🔐 Génération du token CSRF s'il n'existe pas déjà
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -815,6 +822,7 @@ $statusBadge = match ($status) {
             <table class="table align-middle">
                 <thead>
                     <tr>
+                        <th style="width: 8%;">Vignette</th>
                         <th style="width: 16%;">Titre</th>
                         <th style="width: 13%;">Auteur</th>
                         <th style="width: 23%;">Contenu</th>
@@ -830,6 +838,22 @@ $statusBadge = match ($status) {
                     <!-- Boucle d'affichage des articles -->
                     <?php foreach ($articles as $article): ?>
                         <tr>
+                            <td>
+                                <?php
+                                $thumb = '';
+                                if (!empty($article['images']) && is_array($article['images'])) {
+                                    $filename = $article['images'][0];
+                                    $base = pathinfo($filename, PATHINFO_FILENAME);
+                                    $ext = pathinfo($filename, PATHINFO_EXTENSION);
+                                    $thumb = "/le_Studio_Backend/uploads/articles/thumb/{$base}_thumb.{$ext}";
+                                }
+                                ?>
+                                <?php if ($thumb): ?>
+                                    <img src="<?= htmlspecialchars($thumb) ?>" alt="Miniature" style="max-width: 60px; max-height: 60px; object-fit: cover; border-radius: 6px; border: 1px solid #ddd; background: #f8f9fa;">
+                                <?php else: ?>
+                                    <span class="text-muted">—</span>
+                                <?php endif; ?>
+                            </td>
                             <td><?= htmlspecialchars($article['title']) ?></td>
                             <td><?= htmlspecialchars($article['author_name'] ?? 'Inconnu') ?></td>
                             <td><?= mb_strimwidth(strip_tags($article['content']), 0, 60, '...') ?></td>
@@ -846,33 +870,30 @@ $statusBadge = match ($status) {
                                 <?php endif; ?>
                             </td>
                             <td>
-                                <!-- Bouton : voir l'article -->
-                                <button class="btn btn-primary btn-sm view-article"
-                                        data-id="<?= $article['id'] ?>"
-                                        data-title="<?= htmlspecialchars($article['title']) ?>"
-                                        data-content="<?= htmlspecialchars($article['content']) ?>"
-                                        data-images='<?= json_encode($article['images'] ?? []) ?>'
-                                        data-date="<?= htmlspecialchars($article['created_at']) ?>">
-                                    <i class="fas fa-eye"></i>
-                                </button>
-
-                                <!-- Bouton : modifier l'article -->
-                                <button class="btn btn-warning btn-sm edit-article"
-                                        data-id="<?= $article['id'] ?>"
-                                        data-title="<?= htmlspecialchars($article['title']) ?>"
-                                        data-content="<?= htmlspecialchars($article['content']) ?>"
-                                        data-images='<?= json_encode($article['images'] ?? []) ?>'
-                                        data-is-published="<?= $article['is_published'] ?>"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#editArticleModal">
-                                    <i class="fas fa-edit"></i>
-                                </button>
-
-                                <!-- Bouton : supprimer l'article -->
-                                <button class="btn btn-danger btn-sm delete-article"
-                                        data-id="<?= $article['id'] ?>">
-                                    <i class="fas fa-trash"></i>
-                                </button>
+                                <div class="d-flex flex-column align-items-center gap-2">
+                                    <button class="btn btn-primary btn-sm view-article w-100"
+                                            data-id="<?= $article['id'] ?>"
+                                            data-title="<?= htmlspecialchars($article['title']) ?>"
+                                            data-content="<?= htmlspecialchars($article['content']) ?>"
+                                            data-images='<?= json_encode($article['images'] ?? []) ?>'
+                                            data-date="<?= htmlspecialchars($article['created_at']) ?>">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="btn btn-warning btn-sm edit-article w-100"
+                                            data-id="<?= $article['id'] ?>"
+                                            data-title="<?= htmlspecialchars($article['title']) ?>"
+                                            data-content="<?= htmlspecialchars($article['content']) ?>"
+                                            data-images='<?= json_encode($article['images'] ?? []) ?>'
+                                            data-is-published="<?= $article['is_published'] ?>"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#editArticleModal">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-danger btn-sm delete-article w-100"
+                                            data-id="<?= $article['id'] ?>">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
                             </td>
                         </tr>
                     <?php endforeach; ?>
